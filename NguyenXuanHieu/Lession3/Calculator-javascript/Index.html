@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<style>
+    .container {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        min-height: 100vh;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    }
+
+    .container>button {
+        font-size: 2rem;
+        outline: none;
+        background-color: rgba(255, 255, 255, .75);
+    }
+
+    .button-clear {
+        grid-column: 1/span 4;
+    }
+
+    .button-equals {
+        grid-column: 2/span 2;
+    }
+
+    .container>button :hover {
+        background-color: rgba(255, 255, 255, .9);
+    }
+
+    .output {
+        grid-column: 1 / -1;
+        background-color: rgba(0, 0, 0, .75);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 10px;
+        word-wrap: break-word;
+        word-break: break-all;
+        color: rgba(255, 255, 255, .75);
+        font-size: 2rem;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <input type="text" id="input-field" class="output">
+
+        <button data-all-clear class="button-clear">AC</button>
+        <button data-number="7">7</button>
+        <button data-number="8">8</button>
+        <button data-number="9">9</button>
+        <button data-operation="/">➗</button>
+        <button data-number="4">4</button>
+        <button data-number="5">5</button>
+        <button data-number="6">6</button>
+        <button data-operation="*">✖</button>
+        <button data-number="1">1</button>
+        <button data-number="2">2</button>
+        <button data-number="3">3</button>
+        <button data-operation="-">➖</button>
+        <button data-number="0">0</button>
+        <button data-equals="=" class="button-equals">=</button>
+        <button data-operation="+">➕</button>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+
+</html>

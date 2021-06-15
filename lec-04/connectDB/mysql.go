@@ -1,4 +1,4 @@
-package main
+package connectDB
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-func ConnectDatabase() (db *gorm.DB) {
+func ConnectMySQL() *gorm.DB {
 
 	mysqlCredentials := fmt.Sprintf(
 		"%s:%s@%s(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local",
@@ -23,5 +23,5 @@ func ConnectDatabase() (db *gorm.DB) {
 		panic("Failed to connect to the database!")
 	}
 	defer db.Close()
-	return
+	return db
 }

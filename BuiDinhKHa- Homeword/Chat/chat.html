@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .chat {
+        border: 5px solid cadetblue;
+        width: 300px;
+        height: 400px;
+        display: none;
+        background-color: #F2F2F2;
+    }
+    
+    .icon-chat {
+        flex: 0;
+        display: flex;
+    }
+    
+    .datachat {
+        flex: 8;
+        overflow: auto;
+    }
+    
+    .submit {
+        flex: 0;
+    }
+    
+    .chatcome {
+        display: flex;
+    }
+    
+    .chatout {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+</style>
+
+<body>
+    <div id="chat1">
+        <input type="text" id="myText" placeholder="Enter your name.... ">
+        <button style="background-color: cadetblue; " onclick="showchat()">Chat Now</button>
+    </div>
+    <div class="chat " id="chat2">
+        <div style="display: flex;flex-direction: column;width: 300px; height: 400px; ">
+            <div class="icon-chat ">
+                <div style="flex: 8; text-align: center; ">
+                    <h3>Webcom To Chat</h3>
+                </div>
+                <div style="flex: 2; ">
+                    <img style="width:36px; margin-top: 9px;float: right; " src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png " alt=" " onclick="hidechat() ">
+                </div>
+            </div>
+            <div class="datachat ">
+                <div class="chatcome ">
+                    <div style="flex: 1; ">
+                        <img style=" width: 36px; height: 45px; " src="https://st2.depositphotos.com/9223672/12056/v/950/depositphotos_120568244-stock-illustration-male-face-avatar-logo-template.jpg " alt=" ">
+                    </div>
+                    <div style="flex: 9; ">
+                        <p style="border-style: outset; margin-right: 35px;background-color: lavenderblush; ">helollllllll llllllllllllllll lllllllllllllasdasdas đâsd ádasd asdasda asdas đâsdasd</p>
+                        <p style="font-size: 10px; color: blue;margin: -12px 1px -3px 0px; ">8:17 11/8/2020</p>
+                    </div>
+                </div>
+
+                <div class="chatout " id="chatout ">
+                    <div style="flex: 1; ">
+                        <img style=" width: 36px; height: 45px; " src="https://st2.depositphotos.com/9223672/12056/v/950/depositphotos_120568244-stock-illustration-male-face-avatar-logo-template.jpg " alt=" ">
+                    </div>
+                    <div style="flex: 9; ">
+                        <p style="border-style: outset; margin-left: 35px;background-color: lavenderblush; ">helollllllll llllllllllllllll lllllllllllll</p>
+                        <p style="font-size: 10px; color: blue;margin: -12px 1px -3px 0px;float: right; ">8:17 11/8/2020</p>
+                    </div>
+                </div>
+            </div>
+            <div class="submit ">
+                <input type="text " name=" " id=" " style="width: 80%; height: 20px; ">
+                <button style="color: greenyellow; background-color: indianred; " onclick=" ">sent</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var Name = 0;
+
+        function showchat() {
+            document.getElementById("chat2").style.display = "block ";
+            document.getElementById("chat1").style.display = "none ";
+            Name = document.getElementById("myText").value;
+        }
+
+        function hidechat() {
+            document.getElementById("chat2").style.display = "none ";
+            document.getElementById("chat1").style.display = "block ";
+        }
+
+        function addchat() {
+            html = "<p style='border-style: outset; margin-left: 35px;background-color: lavenderblush;'>"
+            "helollllllll llllllllllllllll lllllllllllll</p>"
+            document.getElementById("aaa").innerHTML = html;
+        }
+        fetch('http://localhost:8080/chat?name=%22thang%22&time=%2218:9%22&chat=%22hello%22')
+            .then(Response => Response.json())
+            .then(json => setMess(json))
+
+        function setMess(value) {
+            let i = 0
+            for (i = 0; i < value.length; i++) {
+                if (value[i].Name == Name) {
+                    console.log(value[i].Name)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -5,15 +5,15 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"tfs-02/lec-04/connectDB"
+	"tfs-02/lec-04/crawler/connectDB"
 	"time"
 )
 
 type Product struct {
-	Title    string     `json:"title"`
-	Price    int        `json:"price"`
-	Image    []Images   `json:"images"`
-	Variants []Variants `json:"variants"`
+	Title string `json:"title"`
+	Price int    `json:"price"`
+	// Image    []Images   `json:"images"`
+	// Variants []Variants `json:"variants"`
 }
 
 type Variants struct {
@@ -34,14 +34,14 @@ func CrawlProduct() {
 	}
 	b := make(chan Product)
 	q := make(chan bool)
-	go craw(b)
+	go craw1(b)
 	go sendData1(b, q)
 	time.Sleep(time.Second * 20)
 	q <- true
 
 }
 
-func craw(b chan Product) {
+func craw1(b chan Product) {
 	resp, err := http.Get("https://template-homedecor.onshopbase.com/api/catalog/products_v2.json")
 	if err != nil {
 		return
@@ -53,8 +53,8 @@ func craw(b chan Product) {
 		product := Product{}
 		product.Title = data.Products[i].Title
 		product.Price = data.Products[i].Price
-		product.Variants = data.Products[i].Variants
-		product.Image = data.Products[i].Image
+		// product.Variants = data.Products[i].Variants
+		// product.Image = data.Products[i].Image
 		b <- product
 	}
 }
@@ -65,10 +65,10 @@ func sendData1(b chan Product, q chan bool) {
 		select {
 		case s := <-b:
 			user := Product{
-				Title:    s.Title,
-				Price:    s.Price,
-				Variants: s.Variants,
-				Image:    s.Image,
+				Title: s.Title,
+				Price: s.Price,
+				// Variants: s.Variants,
+				// Image:    s.Image,
 			}
 			db.Create(&user)
 		case <-q:

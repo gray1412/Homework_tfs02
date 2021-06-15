@@ -22,6 +22,6 @@ func ConnectMySQL() *gorm.DB {
 		fmt.Println(err)
 		panic("Failed to connect to the database!")
 	}
-	defer db.Close()
+	// defer db.Close()
 	return db
 }

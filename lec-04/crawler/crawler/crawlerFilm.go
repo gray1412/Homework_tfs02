@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"tfs-02/lec-04/connectDB"
+	"tfs-02/lec-04/crawler/connectDB"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gocolly/colly"
@@ -73,7 +73,6 @@ func crawl(d chan Film) {
 		film := Film{}
 		film.Title = e.ChildText(".titleColumn a")
 		// film.Year = e.ChildText(".titleColumn a")
-		// fmt.Println(film.Year)
 		film.Link = e.ChildAttr("a", "href")
 		film.Image = e.ChildAttr("img", "src")
 		film.Rate = e.ChildText(".ratingColumn strong")

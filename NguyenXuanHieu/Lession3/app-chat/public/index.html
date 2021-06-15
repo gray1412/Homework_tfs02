@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>Websockets Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #00aaff, #00ff6c);
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .header>input {
+            width: 200px;
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            height: 55vh;
+            background-color: cornsilk;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            padding-bottom: 20px;
+        }
+
+        .footer>textarea {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tilte">
+            <h1 class="text-center">App Chat Reatime</h1>
+        </div>
+        <br>
+        <div style="background-color: white;">
+            <div class="header">
+                <input type="text" name="username" id="username" placeholder="Enter name.." class="form-control">
+                <div style="background-color:none"></div>
+            </div>
+            <div class="content">
+                <div id="messages" class="content-message"></div>
+            </div>
+            <br>
+            <div class="footer">
+                <textarea id="textarea" name="inputMessage" class="form-control"
+                    placeholder="Enter message..."></textarea>
+                <button id="send" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

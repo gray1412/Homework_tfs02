@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    height: 400px;
+}
+
+.row1 {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.row1-column0 {
+    flex-grow: 8;
+}
+.row1-1-image {
+    width: 1%;
+    height: 30%;
+    flex-grow: 1;
+}
+.row1-2-text {
+    flex-grow: 1;
+    text-align: end;
+}   
+
+.row2 {
+    width: 70%;
+    display: flex;
+    border: 1px solid rgb(5, 5, 5) ;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-grow: 10;
+
+}
+.row2-column1-messager1 {
+    padding-left: 10px;
+    flex-grow: 3;
+}
+
+.messager1 {
+    padding-left: 10px;
+}
+
+.row2-column1-messager2 {
+    flex-grow: 7;
+}
+
+.messager2 {
+    padding-right: 10px;
+}
+
+.row3 {
+    width: 70%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row3-column1-message-input {
+    flex-grow: 8;
+    height: 80%;
+}
+.row3-column2-btn {
+    flex-grow: 2;
+    height: 50%;
+}

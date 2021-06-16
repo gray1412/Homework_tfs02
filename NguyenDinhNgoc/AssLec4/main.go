@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
+	"sync"
+	
 	"ngoc/crawler"
 	"ngoc/storage"
-	"sync"
 )
 
 func downloadWithGoroutine(urls []string) (MapFilm storage.Memory_Storage_Film, MapItem storage.Memory_Storage_Item) {

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <form name="calculator">
+            <div class="display">
+                <input type="text" name="display" style="background-color: red" placeholder="0"/>
+            </div>
+            <div class="input">
+                <div class="row">
+                    <input type="button" name="seven" value="7" onclick="clickNumber(seven.value)">
+                    <input type="button" name="eight" value="8" onclick="clickNumber(eight.value)">
+                    <input type="button" name="nine" value="9" onclick="clickNumber(nine.value)">
+                    <input type="button" name="add" value="+" onclick="clickNumber(add.value)">
+                </div>
+                <div class="row">
+                    <input type="button" name="four" value="4" onclick="clickNumber(four.value)">
+                    <input type="button" name="five" value="5" onclick="clickNumber(five.value)">
+                    <input type="button" name="six" value="6" onclick="clickNumber(six.value)">
+                    <input type="button" name="sub" value="-" onclick="clickNumber(sub.value)">
+                </div>
+                <div class="row">
+                    <input type="button" name="one" value="1" onclick="clickNumber(one.value)">
+                    <input type="button" name="two" value="2" onclick="clickNumber(two.value)">
+                    <input type="button" name="three" value="3" onclick="clickNumber(three.value)">
+                    <input type="button" name="mul" value="*" onclick="clickNumber(mul.value)">
+                </div>
+                <div class="row">
+                    <input type="button" name="zero" value="0" onclick="clickNumber(zero.value)">
+                    <input type="button" name="dot" value="." onclick="clickNumber(dot.value)">
+                    <input type="button" name="div" value="/" onclick="clickNumber(div.value)">
+                    <input type="button" class="equal" value="=" onclick="calculator.display.value=eval(calculator.display.value)">
+                </div>
+            </div>
+        </form>  
+    </div>
+    <script>
+        function clickNumber(input){
+            calculator.display.value+=input
+        }
+    </script>
+</body>
+</html>

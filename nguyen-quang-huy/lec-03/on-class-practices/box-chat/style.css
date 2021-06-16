@@ -1,0 +1,90 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 400px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+}
+.top{
+    flex-grow: 0.5;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.boxchat{
+    flex-grow: 12;
+    border:  1px solid ;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.botton{
+    flex-grow: 2;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.img{
+    margin-right: 8px;
+}
+.name{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+.row{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.rA{
+    flex-direction: row;
+}
+.rB{
+    flex-direction: row-reverse;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+}
+.mB{
+    align-items: flex-end;
+}
+.person{
+    width: 30px;
+
+    display: flex;
+    justify-content: center;
+}
+.time{
+    font-size: 10px;
+}
+input{
+    width: 80%;
+    height: 45px;
+
+    margin-right: 8px;
+    padding-left: 15px;
+    
+    border:  1px solid;
+    border-radius: 5px;
+}
+button{
+    height: 30px;
+    width: 50px;
+    
+    margin: 10px;
+    border:  1px solid;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

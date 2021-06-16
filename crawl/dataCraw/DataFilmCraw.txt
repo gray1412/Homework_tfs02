@@ -1,0 +1,250 @@
+ID: 1, NAME: Nhà tù Shawshank, RATE: 9.2
+ID: 1, NAME: Bố Già, RATE: 9.1
+ID: 2, NAME: Bố Già Phần II, RATE: 9.0
+ID: 3, NAME: Kỵ Sĩ Bóng Đêm, RATE: 9.0
+ID: 4, NAME: 12 Angry Men, RATE: 8.9
+ID: 5, NAME: Bản Danh Sách Của Schindler, RATE: 8.9
+ID: 6, NAME: The Lord of the Rings: The Return of the King, RATE: 8.9
+ID: 7, NAME: Pulp Fiction, RATE: 8.8
+ID: 8, NAME: Thien, Ac, Ta, RATE: 8.8
+ID: 9, NAME: The Lord of the Rings: The Fellowship of the Ring, RATE: 8.8
+ID: 10, NAME: Fight Club, RATE: 8.8
+ID: 11, NAME: Forrest Gump, RATE: 8.7
+ID: 12, NAME: Kẻ Đánh Cắp Giấc Mơ, RATE: 8.7
+ID: 13, NAME: Chúa Tể Những Chiếc Nhẫn: Hai Tòa Tháp, RATE: 8.7
+ID: 14, NAME: Star Wars: Episode V - The Empire Strikes Back, RATE: 8.7
+ID: 15, NAME: Ma Trận, RATE: 8.6
+ID: 16, NAME: Goodfellas, RATE: 8.6
+ID: 17, NAME: Bay Trên Tổ Chim Cúc Cu, RATE: 8.6
+ID: 18, NAME: Shichinin no samurai, RATE: 8.6
+ID: 19, NAME: Se7en, RATE: 8.6
+ID: 20, NAME: Sự Im Lặng Của Bầy Cừu, RATE: 8.6
+ID: 21, NAME: Cidade de Deus, RATE: 8.6
+ID: 22, NAME: It's a Wonderful Life, RATE: 8.6
+ID: 23, NAME: La vita è bella, RATE: 8.6
+ID: 24, NAME: Star Wars: Niềm Hi Vọng Mới, RATE: 8.6
+ID: 25, NAME: Giải Cứu Binh Nhì Ryan, RATE: 8.5
+ID: 26, NAME: Vùng Đất Linh Hồn, RATE: 8.5
+ID: 27, NAME: Hố Đen Tử Thần, RATE: 8.5
+ID: 28, NAME: The Green Mile, RATE: 8.5
+ID: 29, NAME: Ký Sinh Trùng, RATE: 8.5
+ID: 30, NAME: Léon, RATE: 8.5
+ID: 31, NAME: Seppuku, RATE: 8.5
+ID: 32, NAME: Kẻ Chủ Mưu, RATE: 8.5
+ID: 33, NAME: Nghệ Sĩ Dương Cầm, RATE: 8.5
+ID: 34, NAME: Trở Lại Tương Lai, RATE: 8.5
+ID: 35, NAME: Kẻ Hủy Diệt 2: Ngày Phán Xét, RATE: 8.5
+ID: 36, NAME: Modern Times, RATE: 8.5
+ID: 37, NAME: Psycho, RATE: 8.5
+ID: 38, NAME: Vua Sư Tử, RATE: 8.5
+ID: 39, NAME: American History X, RATE: 8.5
+ID: 40, NAME: Ánh Sáng Đô Thị, RATE: 8.5
+ID: 41, NAME: Gladiator, RATE: 8.5
+ID: 42, NAME: Whiplash, RATE: 8.5
+ID: 43, NAME: Điệp Vụ Boston, RATE: 8.5
+ID: 44, NAME: Mộ Đom Đóm, RATE: 8.5
+ID: 45, NAME: The Intouchables, RATE: 8.5
+ID: 46, NAME: Ảo Thuật Gia Đấu Trí, RATE: 8.5
+ID: 47, NAME: Casablanca, RATE: 8.4
+ID: 48, NAME: Once Upon a Time in the West, RATE: 8.4
+ID: 49, NAME: Rear Window, RATE: 8.4
+ID: 50, NAME: Nuovo Cinema Paradiso, RATE: 8.4
+ID: 51, NAME: Alien, RATE: 8.4
+ID: 52, NAME: Apocalypse Now, RATE: 8.4
+ID: 53, NAME: Memento, RATE: 8.4
+ID: 54, NAME: Indiana Jones Va Chiec Ruong Thanh Tich, RATE: 8.4
+ID: 55, NAME: The Great Dictator, RATE: 8.4
+ID: 56, NAME: The Lives of Others, RATE: 8.4
+ID: 57, NAME: Hành Trình Django, RATE: 8.4
+ID: 58, NAME: Paths of Glory, RATE: 8.4
+ID: 59, NAME: Sunset Blvd., RATE: 8.4
+ID: 60, NAME: Rô-bôt biêt yêu, RATE: 8.4
+ID: 61, NAME: The Shining, RATE: 8.4
+ID: 62, NAME: Witness for the Prosecution, RATE: 8.4
+ID: 63, NAME: Avengers: Cuộc Chiến Vô Cực, RATE: 8.4
+ID: 64, NAME: Joker, RATE: 8.4
+ID: 65, NAME: Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb, RATE: 8.4
+ID: 66, NAME: Người Nhện: Vũ Trụ Mới, RATE: 8.4
+ID: 67, NAME: Oldeuboi, RATE: 8.3
+ID: 68, NAME: Công Chúa Mononoke, RATE: 8.3
+ID: 69, NAME: Hamilton, RATE: 8.3
+ID: 70, NAME: Once Upon a Time in America, RATE: 8.3
+ID: 71, NAME: Tên Cậu Là Gì?, RATE: 8.3
+ID: 72, NAME: Kỵ Sĩ Bóng Đêm Trỗi Dậy, RATE: 8.3
+ID: 73, NAME: Nhung Nguoi Ngoai Hanh Tinh, RATE: 8.3
+ID: 74, NAME: Coco, RATE: 8.3
+ID: 75, NAME: Pather Panchali, RATE: 8.3
+ID: 76, NAME: Das Boot, RATE: 8.3
+ID: 77, NAME: Capharnaüm, RATE: 8.3
+ID: 78, NAME: Tengoku to jigoku, RATE: 8.3
+ID: 79, NAME: Avengers: Hồi Kết, RATE: 8.3
+ID: 80, NAME: Vẻ Đẹp Mỹ, RATE: 8.3
+ID: 81, NAME: Câu Chuyện Đồ Chơi, RATE: 8.3
+ID: 82, NAME: Trái Tim Dũng Cảm, RATE: 8.3
+ID: 83, NAME: Amadeus, RATE: 8.3
+ID: 84, NAME: 3 Idiots, RATE: 8.3
+ID: 85, NAME: Định Mệnh, RATE: 8.3
+ID: 86, NAME: Good Will Hunting, RATE: 8.3
+ID: 87, NAME: Star Wars: Episode VI - Return of the Jedi, RATE: 8.3
+ID: 88, NAME: 2001: A Space Odyssey, RATE: 8.3
+ID: 89, NAME: Reservoir Dogs, RATE: 8.3
+ID: 90, NAME: M - Eine Stadt sucht einen Mörder, RATE: 8.3
+ID: 91, NAME: Cậu Bé Đặc Biệt, RATE: 8.3
+ID: 92, NAME: Citizen Kane, RATE: 8.3
+ID: 93, NAME: Vertigo, RATE: 8.3
+ID: 94, NAME: Nguyen Cau Cho Mot Giac Mo, RATE: 8.3
+ID: 95, NAME: Cuộc Săn Lùng, RATE: 8.3
+ID: 96, NAME: Idi i smotri, RATE: 8.3
+ID: 97, NAME: Singin' in the Rain, RATE: 8.3
+ID: 98, NAME: North by Northwest, RATE: 8.3
+ID: 99, NAME: Tia Nắng Vĩnh Cửu Của Tâm Hồn Tinh Khiết, RATE: 8.3
+ID: 100, NAME: Ladri di biciclette, RATE: 8.3
+ID: 101, NAME: Ikiru, RATE: 8.3
+ID: 102, NAME: Lawrence of Arabia, RATE: 8.2
+ID: 103, NAME: The Kid, RATE: 8.2
+ID: 104, NAME: The Father, RATE: 8.2
+ID: 105, NAME: Full Metal Jacket, RATE: 8.2
+ID: 106, NAME: Dangal, RATE: 8.2
+ID: 107, NAME: A Clockwork Orange, RATE: 8.2
+ID: 108, NAME: Taxi Driver, RATE: 8.2
+ID: 109, NAME: Metropolis, RATE: 8.2
+ID: 110, NAME: The Sting, RATE: 8.2
+ID: 111, NAME: Double Indemnity, RATE: 8.2
+ID: 112, NAME: 1917, RATE: 8.2
+ID: 113, NAME: The Apartment, RATE: 8.2
+ID: 114, NAME: Jodaeiye Nader az Simin, RATE: 8.2
+ID: 115, NAME: Le fabuleux destin d'Amélie Poulain, RATE: 8.2
+ID: 116, NAME: Incendies, RATE: 8.2
+ID: 117, NAME: Snatch, RATE: 8.2
+ID: 118, NAME: Scarface, RATE: 8.2
+ID: 119, NAME: Câu Chuyện Đồ Chơi 3, RATE: 8.2
+ID: 120, NAME: Giết Con Chim Nhại, RATE: 8.2
+ID: 121, NAME: Per qualche dollaro in più, RATE: 8.2
+ID: 122, NAME: Vút Bay, RATE: 8.2
+ID: 123, NAME: Indiana Jones Và Cuộc Thập Tự Chinh Cuối Cùng, RATE: 8.2
+ID: 124, NAME: L.A. Confidential, RATE: 8.2
+ID: 125, NAME: Heat, RATE: 8.2
+ID: 126, NAME: Lã Sinh Môn, RATE: 8.2
+ID: 127, NAME: Yojinbo, RATE: 8.2
+ID: 128, NAME: Ran, RATE: 8.2
+ID: 129, NAME: Die Hard, RATE: 8.2
+ID: 130, NAME: Monty Python and the Holy Grail, RATE: 8.2
+ID: 131, NAME: Green Book, RATE: 8.2
+ID: 132, NAME: Der Untergang, RATE: 8.2
+ID: 133, NAME: Người Dơi Xuất Hiện, RATE: 8.2
+ID: 134, NAME: Some Like It Hot, RATE: 8.2
+ID: 135, NAME: All About Eve, RATE: 8.2
+ID: 136, NAME: Unforgiven, RATE: 8.2
+ID: 137, NAME: Bacheha-Ye aseman, RATE: 8.2
+ID: 138, NAME: Hauru no ugoku shiro, RATE: 8.2
+ID: 139, NAME: Sói Già Phố Wall, RATE: 8.2
+ID: 140, NAME: The Great Escape, RATE: 8.2
+ID: 141, NAME: Judgment at Nuremberg, RATE: 8.2
+ID: 142, NAME: Casino, RATE: 8.2
+ID: 143, NAME: The Treasure of the Sierra Madre, RATE: 8.2
+ID: 144, NAME: Pan's Labyrinth, RATE: 8.2
+ID: 145, NAME: There Will Be Blood, RATE: 8.1
+ID: 146, NAME: A Beautiful Mind, RATE: 8.1
+ID: 147, NAME: El secreto de sus ojos, RATE: 8.1
+ID: 148, NAME: Raging Bull, RATE: 8.1
+ID: 149, NAME: Hàng Xóm Của Tôi Là Totoro, RATE: 8.1
+ID: 150, NAME: Chinatown, RATE: 8.1
+ID: 151, NAME: Lock, Stock and Two Smoking Barrels, RATE: 8.1
+ID: 152, NAME: The Gold Rush, RATE: 8.1
+ID: 153, NAME: Three Billboards: Truy Tìm Công Lý, RATE: 8.1
+ID: 154, NAME: Dial M for Murder, RATE: 8.1
+ID: 155, NAME: Không Chốn Dung Thân, RATE: 8.1
+ID: 156, NAME: Đảo Kinh Hoàng, RATE: 8.1
+ID: 157, NAME: Det sjunde inseglet, RATE: 8.1
+ID: 158, NAME: The Elephant Man, RATE: 8.1
+ID: 159, NAME: The Thing, RATE: 8.1
+ID: 160, NAME: Giác Quan Thứ Sáu, RATE: 8.1
+ID: 161, NAME: Những Mảnh Ghép Cảm Xúc, RATE: 8.1
+ID: 162, NAME: Klaus - Câu Chuyện Giáng Sinh, RATE: 8.1
+ID: 163, NAME: V for Vendetta, RATE: 8.1
+ID: 164, NAME: The Third Man, RATE: 8.1
+ID: 165, NAME: Blade Runner, RATE: 8.1
+ID: 166, NAME: The Bridge on the River Kwai, RATE: 8.1
+ID: 167, NAME: Smultronstället, RATE: 8.1
+ID: 168, NAME: Trainspotting, RATE: 8.1
+ID: 169, NAME: Babam ve Oglum, RATE: 8.1
+ID: 170, NAME: The Truman Show, RATE: 8.1
+ID: 171, NAME: Công Viên Kỷ Jura, RATE: 8.1
+ID: 172, NAME: Warrior, RATE: 8.1
+ID: 173, NAME: Fargo, RATE: 8.1
+ID: 174, NAME: Salinui chueok, RATE: 8.1
+ID: 175, NAME: Đi Tìm Nemo, RATE: 8.1
+ID: 176, NAME: Cuốn Theo Chiều Gió, RATE: 8.1
+ID: 177, NAME: Cau Chuyen Tokyo, RATE: 8.1
+ID: 178, NAME: Kill Bill: Vol. 1, RATE: 8.1
+ID: 179, NAME: On the Waterfront, RATE: 8.1
+ID: 180, NAME: Stalker, RATE: 8.1
+ID: 181, NAME: The General, RATE: 8.1
+ID: 182, NAME: The Deer Hunter, RATE: 8.1
+ID: 183, NAME: Relatos salvajes, RATE: 8.1
+ID: 184, NAME: Gran Torino, RATE: 8.1
+ID: 185, NAME: Sherlock Jr., RATE: 8.1
+ID: 186, NAME: Room, RATE: 8.1
+ID: 187, NAME: The Grand Budapest Hotel, RATE: 8.1
+ID: 188, NAME: Before Sunrise, RATE: 8.1
+ID: 189, NAME: Persona, RATE: 8.1
+ID: 190, NAME: Mary Và Max, RATE: 8.1
+ID: 191, NAME: In the Name of the Father, RATE: 8.1
+ID: 192, NAME: Lần Theo Dấu Vết, RATE: 8.1
+ID: 193, NAME: Mr. Smith Goes to Washington, RATE: 8.1
+ID: 194, NAME: Cô Gái Mất Tích, RATE: 8.1
+ID: 195, NAME: To Be or Not to Be, RATE: 8.1
+ID: 196, NAME: Hãy Bắt Tôi Nếu Có Thể, RATE: 8.1
+ID: 197, NAME: Hacksaw Ridge, RATE: 8.1
+ID: 198, NAME: Andhadhun, RATE: 8.1
+ID: 199, NAME: Barry Lyndon, RATE: 8.1
+ID: 200, NAME: The Big Lebowski, RATE: 8.1
+ID: 201, NAME: Cuộc Đua Lịch Sử, RATE: 8.1
+ID: 202, NAME: 12 Năm Nô Lệ, RATE: 8.1
+ID: 203, NAME: La passion de Jeanne d'Arc, RATE: 8.1
+ID: 204, NAME: Bí Kíp Luyện Rồng, RATE: 8.1
+ID: 205, NAME: Max Điên: Con Đường Tử Thần, RATE: 8.1
+ID: 206, NAME: Le salaire de la peur, RATE: 8.1
+ID: 207, NAME: Ben-Hur, RATE: 8.1
+ID: 208, NAME: Million Dollar Baby, RATE: 8.1
+ID: 209, NAME: Dead Poets Society, RATE: 8.1
+ID: 210, NAME: Network, RATE: 8.1
+ID: 211, NAME: Stand by Me, RATE: 8.1
+ID: 212, NAME: Harry Potter và Bảo Bối Tử Thần: Phần 2, RATE: 8.1
+ID: 213, NAME: Höstsonaten, RATE: 8.1
+ID: 214, NAME: Cool Hand Luke, RATE: 8.1
+ID: 215, NAME: Les quatre cents coups, RATE: 8.1
+ID: 216, NAME: Ah-ga-ssi, RATE: 8.1
+ID: 217, NAME: Eskiya, RATE: 8.1
+ID: 218, NAME: Logan: Người Sói, RATE: 8.0
+ID: 219, NAME: Platoon, RATE: 8.0
+ID: 220, NAME: Hachi: A Dog's Tale, RATE: 8.0
+ID: 221, NAME: La haine, RATE: 8.0
+ID: 222, NAME: Life of Brian, RATE: 8.0
+ID: 223, NAME: Spotlight, RATE: 8.0
+ID: 224, NAME: Hotel Rwanda, RATE: 8.0
+ID: 225, NAME: Into the Wild, RATE: 8.0
+ID: 226, NAME: Đường Đua Nghẹt Thở, RATE: 8.0
+ID: 227, NAME: Rebecca, RATE: 8.0
+ID: 228, NAME: Andrei Rublev, RATE: 8.0
+ID: 229, NAME: Công Ty Quái Vật, RATE: 8.0
+ID: 230, NAME: Drishyam 2, RATE: 8.0
+ID: 231, NAME: Amores perros, RATE: 8.0
+ID: 232, NAME: Ratsasan, RATE: 8.0
+ID: 233, NAME: Rocky, RATE: 8.0
+ID: 234, NAME: Gangs of Wasseypur, RATE: 8.0
+ID: 235, NAME: Dáng Hình Thanh Âm, RATE: 8.0
+ID: 236, NAME: Tâm Trạng Khi Yêu, RATE: 8.0
+ID: 237, NAME: It Happened One Night, RATE: 8.0
+ID: 238, NAME: Kaze no tani no Naushika, RATE: 8.0
+ID: 239, NAME: La battaglia di Algeri, RATE: 8.0
+ID: 240, NAME: Before Sunset, RATE: 8.0
+ID: 241, NAME: Du rififi chez les hommes, RATE: 8.0
+ID: 242, NAME: Cuộc Sống Nhiệm Màu, RATE: 8.0
+ID: 243, NAME: The Princess Bride, RATE: 8.0
+ID: 244, NAME: Fanny och Alexander, RATE: 8.0
+ID: 245, NAME: Trois couleurs: Rouge, RATE: 8.0
+ID: 246, NAME: Sunrise: A Song of Two Humans, RATE: 8.0
+ID: 247, NAME: Shin seiki Evangelion Gekijô-ban: Air/Magokoro wo, kimi ni, RATE: 8.0
+ID: 248, NAME: Drishyam, RATE: 8.0
+ID: 249, NAME: Miracle in Cell No. 7, RATE: 8.0

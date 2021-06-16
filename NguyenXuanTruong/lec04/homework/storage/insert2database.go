@@ -6,7 +6,7 @@ import (
 )
 
 // Thêm dữ liệu vào database
-func insert2DatabaseFilm(db *gorm.DB, ch chan Film) {
+func Insert2DatabaseFilm(db *gorm.DB, ch chan Film) {
 	for {
 		select {
 		case <-ch:

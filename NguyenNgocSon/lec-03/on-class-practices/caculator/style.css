@@ -1,0 +1,60 @@
+.container{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+.caculator{
+    width: 299px;
+}
+.screen-caculator{
+    height: 30%;
+    width: 250px;
+}
+.screen-caculator input{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border: none;
+    background-color: #f05945;
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: right;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.caculator .key-board{
+    padding: 1rem;
+}
+.caculator .key-board .lines{
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    justify-content: space-between;
+}
+.lines{
+    margin-bottom: 1rem;
+}
+.clear{
+    display: flex;
+}
+.btn{
+    width: 25%;
+}
+.btn button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: none;
+    background-color: #dbdbdb;
+    font-size: 20px;
+    font-weight: 600;
+}
+.btn button:hover{
+    cursor: pointer;
+}
+#submit button{
+    background-color: #f05945;
+    color: #ffffff;
+}

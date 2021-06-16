@@ -1,0 +1,90 @@
+.center{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 672px;
+    padding-top: 0;
+    padding-top: 20px;
+    color: #707070;
+    height: calc(100vh - 20px);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    /* height: 100vh; */
+}
+.title{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+.img img{
+    height: 70px;
+    width: 70px;
+}
+.img{
+    margin-right: 1rem;
+}
+.chat-screen{
+    width: 100%;
+    border: 2px solid #dbdbdb;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    flex-grow: 1;
+}
+.chat-screen .sender{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1rem;
+}
+.chat-screen .sender .sender-name{
+    margin-right: 1rem;
+}
+.chat-screen .receiver{
+    display: flex;
+    justify-content: flex-end;
+}
+.chat-screen .receiver .receiver-name{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.message-sender-content{
+   text-align: left;
+}
+.message-receiver-content{
+    text-align: right;
+}
+.text{
+    font-size: 14px;
+}
+.subtext{
+    font-size: 10px;
+}
+.post-message{
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-message input{
+    height: 3rem;
+    width: 80%;
+    border: 2px solid #dbdbdb;
+    border-radius: 4px;
+    padding-left: 1rem;
+}
+.post-message button{
+    height: 2.5rem;
+    width: 4rem;
+    border: 2px solid #dbdbdb;
+    color: #707070;
+    border-radius: 4px;
+}

@@ -1,0 +1,251 @@
+{"level":"info","ts":1623814399.160933,"caller":"crawler/crawFlim.go:20","msg":"Crawling url https://www.imdb.com/chart/top/?ref_=nv_mv_250"}
+{"level":"info","ts":1623814401.1930351,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Nhà tù Shawshank <nil>} {rate: 15 0 9.2 <nil>}"}
+{"level":"info","ts":1623814401.194472,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Bố Già <nil>} {rate: 15 0 9.1 <nil>}"}
+{"level":"info","ts":1623814401.19576,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Bố Già Phần II <nil>} {rate: 15 0 9.0 <nil>}"}
+{"level":"info","ts":1623814401.1963258,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Kỵ Sĩ Bóng Đêm <nil>} {rate: 15 0 9.0 <nil>}"}
+{"level":"info","ts":1623814401.197295,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 12 Angry Men <nil>} {rate: 15 0 8.9 <nil>}"}
+{"level":"info","ts":1623814401.1983006,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Bản Danh Sách Của Schindler <nil>} {rate: 15 0 8.9 <nil>}"}
+{"level":"info","ts":1623814401.199313,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Lord of the Rings: The Return of the King <nil>} {rate: 15 0 8.9 <nil>}"}
+{"level":"info","ts":1623814401.2012937,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Pulp Fiction <nil>} {rate: 15 0 8.8 <nil>}"}
+{"level":"info","ts":1623814401.202172,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Thien, Ac, Ta <nil>} {rate: 15 0 8.8 <nil>}"}
+{"level":"info","ts":1623814401.203141,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Lord of the Rings: The Fellowship of the Ring <nil>} {rate: 15 0 8.8 <nil>}"}
+{"level":"info","ts":1623814401.204139,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Fight Club <nil>} {rate: 15 0 8.8 <nil>}"}
+{"level":"info","ts":1623814401.205139,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Forrest Gump <nil>} {rate: 15 0 8.7 <nil>}"}
+{"level":"info","ts":1623814401.20618,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Kẻ Đánh Cắp Giấc Mơ <nil>} {rate: 15 0 8.7 <nil>}"}
+{"level":"info","ts":1623814401.2073832,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Chúa Tể Những Chiếc Nhẫn: Hai Tòa Tháp <nil>} {rate: 15 0 8.7 <nil>}"}
+{"level":"info","ts":1623814401.2076192,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Star Wars: Episode V - The Empire Strikes Back <nil>} {rate: 15 0 8.7 <nil>}"}
+{"level":"info","ts":1623814401.2087111,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Ma Trận <nil>} {rate: 15 0 8.6 <nil>}"}
+{"level":"info","ts":1623814401.2097123,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Goodfellas <nil>} {rate: 15 0 8.6 <nil>}"}
+{"level":"info","ts":1623814401.2107246,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Bay Trên Tổ Chim Cúc Cu <nil>} {rate: 15 0 8.6 <nil>}"}
+{"level":"info","ts":1623814401.217951,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Shichinin no samurai <nil>} {rate: 15 0 8.6 <nil>}"}
+{"level":"info","ts":1623814401.2188818,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Se7en <nil>} {rate: 15 0 8.6 <nil>}"}
+{"level":"info","ts":1623814401.2200308,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Sự Im Lặng Của Bầy Cừu <nil>} {rate: 15 0 8.6 <nil>}"}
+{"level":"info","ts":1623814401.2211766,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Cidade de Deus <nil>} {rate: 15 0 8.6 <nil>}"}
+{"level":"info","ts":1623814401.2222922,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 It's a Wonderful Life <nil>} {rate: 15 0 8.6 <nil>}"}
+{"level":"info","ts":1623814401.2234342,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 La vita è bella <nil>} {rate: 15 0 8.6 <nil>}"}
+{"level":"info","ts":1623814401.2242007,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Star Wars: Niềm Hi Vọng Mới <nil>} {rate: 15 0 8.6 <nil>}"}
+{"level":"info","ts":1623814401.22547,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Giải Cứu Binh Nhì Ryan <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2268524,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Vùng Đất Linh Hồn <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2274199,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Hố Đen Tử Thần <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2285824,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Green Mile <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2291336,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Ký Sinh Trùng <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.22973,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Léon <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2309325,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Seppuku <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.231481,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Kẻ Chủ Mưu <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2320168,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Nghệ Sĩ Dương Cầm <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.233341,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Trở Lại Tương Lai <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.234472,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Kẻ Hủy Diệt 2: Ngày Phán Xét <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2349246,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Modern Times <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2359266,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Psycho <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.236421,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Vua Sư Tử <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2374222,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 American History X <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2379208,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Ánh Sáng Đô Thị <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2389226,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Gladiator <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.23942,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Whiplash <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.24095,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Điệp Vụ Boston <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2424235,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Mộ Đom Đóm <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2429216,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Intouchables <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2439325,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Ảo Thuật Gia Đấu Trí <nil>} {rate: 15 0 8.5 <nil>}"}
+{"level":"info","ts":1623814401.2450366,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Casablanca <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2456129,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Once Upon a Time in the West <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2467277,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Rear Window <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2473574,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Nuovo Cinema Paradiso <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2484846,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Alien <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2484846,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Apocalypse Now <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2494667,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Memento <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2504566,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Indiana Jones Va Chiec Ruong Thanh Tich <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2514575,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Great Dictator <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2514575,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Lives of Others <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2524517,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Hành Trình Django <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2534492,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Paths of Glory <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2542012,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Sunset Blvd. <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.255169,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Rô-bôt biêt yêu <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2561672,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Shining <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2561672,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Witness for the Prosecution <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.258353,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Avengers: Cuộc Chiến Vô Cực <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2593796,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Joker <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2603972,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.2613866,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Người Nhện: Vũ Trụ Mới <nil>} {rate: 15 0 8.4 <nil>}"}
+{"level":"info","ts":1623814401.26239,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Oldeuboi <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.263381,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Công Chúa Mononoke <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2650552,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Hamilton <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2658997,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Once Upon a Time in America <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2658997,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Tên Cậu Là Gì? <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.267394,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Kỵ Sĩ Bóng Đêm Trỗi Dậy <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2683983,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Nhung Nguoi Ngoai Hanh Tinh <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2694016,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Coco <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2703953,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Pather Panchali <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.271397,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Das Boot <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2724032,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Capharnaüm <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2733924,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Tengoku to jigoku <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2743943,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Avengers: Hồi Kết <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.276393,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Vẻ Đẹp Mỹ <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2773948,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Câu Chuyện Đồ Chơi <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2773948,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Trái Tim Dũng Cảm <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2783928,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Amadeus <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2793975,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 3 Idiots <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2803967,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Định Mệnh <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2813928,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Good Will Hunting <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2823927,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Star Wars: Episode VI - Return of the Jedi <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2823927,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 2001: A Space Odyssey <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2833939,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Reservoir Dogs <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2844007,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 M - Eine Stadt sucht einen Mörder <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.285398,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Cậu Bé Đặc Biệt <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2863917,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Citizen Kane <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2873929,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Vertigo <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.288481,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Nguyen Cau Cho Mot Giac Mo <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.288481,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Cuộc Săn Lùng <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2896707,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Idi i smotri <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.290671,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Singin' in the Rain <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2916837,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 North by Northwest <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.293068,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Tia Nắng Vĩnh Cửu Của Tâm Hồn Tinh Khiết <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2936232,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Ladri di biciclette <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.294172,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Ikiru <nil>} {rate: 15 0 8.3 <nil>}"}
+{"level":"info","ts":1623814401.2947268,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Lawrence of Arabia <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.2952616,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Kid <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.2958312,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Father <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.2969482,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Full Metal Jacket <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.2975023,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Dangal <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.298053,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 A Clockwork Orange <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.2986073,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Taxi Driver <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.2991614,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Metropolis <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3001494,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Sting <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3008745,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Double Indemnity <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3014362,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 1917 <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3019364,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Apartment <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3024364,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Jodaeiye Nader az Simin <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3034403,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Le fabuleux destin d'Amélie Poulain <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.304084,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Incendies <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.30521,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Snatch <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3057456,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Scarface <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3063424,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Câu Chuyện Đồ Chơi 3 <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.307778,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Giết Con Chim Nhại <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.309525,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Per qualche dollaro in più <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3100708,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Vút Bay <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3106177,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Indiana Jones Và Cuộc Thập Tự Chinh Cuối Cùng <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3111575,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 L.A. Confidential <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3123558,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Heat <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3131337,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Lã Sinh Môn <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3137941,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Yojinbo <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3144202,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Ran <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.315031,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Die Hard <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3155823,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Monty Python and the Holy Grail <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3161144,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Green Book <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.316671,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Der Untergang <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3172195,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Người Dơi Xuất Hiện <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.317776,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Some Like It Hot <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3183494,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 All About Eve <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.318898,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Unforgiven <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3194845,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Bacheha-Ye aseman <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3194845,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Hauru no ugoku shiro <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3433125,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Sói Già Phố Wall <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3438864,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Great Escape <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3443942,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Judgment at Nuremberg <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3444273,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Casino <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3449636,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Treasure of the Sierra Madre <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3454962,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Pan's Labyrinth <nil>} {rate: 15 0 8.2 <nil>}"}
+{"level":"info","ts":1623814401.3454962,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 There Will Be Blood <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3460279,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 A Beautiful Mind <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.346557,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 El secreto de sus ojos <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.346624,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Raging Bull <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3471582,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Hàng Xóm Của Tôi Là Totoro <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.347666,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Chinatown <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3476973,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Lock, Stock and Two Smoking Barrels <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.348233,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Gold Rush <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.348233,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Three Billboards: Truy Tìm Công Lý <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.348776,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Dial M for Murder <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3493857,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Không Chốn Dung Thân <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.350051,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Đảo Kinh Hoàng <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3504694,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Det sjunde inseglet <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3513966,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Elephant Man <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3518953,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Thing <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3533967,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Giác Quan Thứ Sáu <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.355558,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Những Mảnh Ghép Cảm Xúc <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3578238,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Klaus - Câu Chuyện Giáng Sinh <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3583713,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 V for Vendetta <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.359609,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Third Man <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3601503,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Blade Runner <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.360854,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Bridge on the River Kwai <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.361394,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Smultronstället <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.361943,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Trainspotting <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3624659,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Babam ve Oglum <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3631322,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Truman Show <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3632367,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Công Viên Kỷ Jura <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3637588,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Warrior <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.364314,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Fargo <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3649037,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Salinui chueok <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.365643,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Đi Tìm Nemo <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3660827,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Cuốn Theo Chiều Gió <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3665583,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Cau Chuyen Tokyo <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3670573,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Kill Bill: Vol. 1 <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3670573,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 On the Waterfront <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.367557,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Stalker <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3680584,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The General <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3680584,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Deer Hunter <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3685548,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Relatos salvajes <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3690567,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Gran Torino <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3690567,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Sherlock Jr. <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.369559,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Room <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3700554,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Grand Budapest Hotel <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.370555,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Before Sunrise <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.370555,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Persona <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3710575,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Mary Và Max <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.371559,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 In the Name of the Father <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.371559,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Lần Theo Dấu Vết <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3720582,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Mr. Smith Goes to Washington <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3725572,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Cô Gái Mất Tích <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3725572,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 To Be or Not to Be <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.373056,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Hãy Bắt Tôi Nếu Có Thể <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3735583,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Hacksaw Ridge <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.374059,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Andhadhun <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3745568,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Barry Lyndon <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3750818,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Big Lebowski <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3755565,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Cuộc Đua Lịch Sử <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.376059,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 12 Năm Nô Lệ <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3765569,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 La passion de Jeanne d'Arc <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3765569,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Bí Kíp Luyện Rồng <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3770542,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Max Điên: Con Đường Tử Thần <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3775556,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Le salaire de la peur <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3775556,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Ben-Hur <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3780541,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Million Dollar Baby <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3785543,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Dead Poets Society <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3785543,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Network <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3790574,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Stand by Me <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3790574,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Harry Potter và Bảo Bối Tử Thần: Phần 2 <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3790574,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Höstsonaten <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3800697,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Cool Hand Luke <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3800697,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Les quatre cents coups <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3800697,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Ah-ga-ssi <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3810694,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Eskiya <nil>} {rate: 15 0 8.1 <nil>}"}
+{"level":"info","ts":1623814401.3810694,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Logan: Người Sói <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3820684,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Platoon <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3825483,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Hachi: A Dog's Tale <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3830163,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 La haine <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3833523,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Life of Brian <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3833523,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Spotlight <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3833523,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Hotel Rwanda <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3833523,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Into the Wild <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.384826,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Đường Đua Nghẹt Thở <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.384826,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Rebecca <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.384826,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Andrei Rublev <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3858292,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Công Ty Quái Vật <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3858292,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Drishyam 2 <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3868277,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Amores perros <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3868277,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Ratsasan <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3868277,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Rocky <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3878257,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Gangs of Wasseypur <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3878257,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Dáng Hình Thanh Âm <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3888357,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Tâm Trạng Khi Yêu <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3898263,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 It Happened One Night <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3898263,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Kaze no tani no Naushika <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3908253,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 La battaglia di Algeri <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3908253,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Before Sunset <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3908253,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Du rififi chez les hommes <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3918252,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Cuộc Sống Nhiệm Màu <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3918252,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Fanny och Alexander <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3928304,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 The Princess Bride <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3928304,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Trois couleurs: Rouge <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3928304,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Sunrise: A Song of Two Humans <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3948264,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Shin seiki Evangelion Gekijô-ban: Air/Magokoro wo, kimi ni <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.3948264,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Drishyam <nil>} {rate: 15 0 8.0 <nil>}"}
+{"level":"info","ts":1623814401.395828,"caller":"crawler/crawFlim.go:42","msg":"{nameFilm: 15 0 Miracle in Cell No. 7 <nil>} {rate: 15 0 8.0 <nil>}"}

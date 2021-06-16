@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style=" width: 400px; height: 600px; padding: 10px; margin: 10px;">
+        <form name="calculator">
+            <table>
+                <tr style="height: 100px;">
+                    <td colspan="4">
+                        <input type="text" name="display" disabled id="result" style="background-color: #9800ff; width: 400px; height: 125px; font-size: 60px;color: #000000;">
+                    </td>
+                </tr>
+                <tr style="height: 85px;">
+                    <td><input type="button" name="seven" value="7" onclick="calculator.display.value += 7" style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65;font-size: 30px; color: #0300e1;"></td>
+                    <td><input type="button" name="eight" value="8" onclick="calculator.display.value += 8" style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65;font-size: 30px; color: #0300e1;"></td>
+                    <td><input type="button" name="nine" value="9" onclick="calculator.display.value += 9" style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65;font-size: 30px; color: #0300e1;"></td>
+                    <td style="    width: 60px;"><input type="button" class="operator" name="plus" value=" + " onclick="calculator.display.value += ' + '" style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65;font-size: 30px; color: #eeff01;"></td>
+                </tr>
+                <tr style="height: 85px;">
+                    <td><input type="button" name="four" value="4" onclick="calculator.display.value += 4" style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65;font-size: 30px; color: #0300e1;"></td>
+                    <td><input type="button" name="five" value="5" onclick="calculator.display.value += 5" style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65;font-size: 30px; color: #0300e1;"></td>
+                    <td><input type="button" name="six" value="6" onclick="calculator.display.value += 6" style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65;font-size: 30px; color: #0300e1;"></td>
+                    <td><input type="button" class="operator" name="minus" value=" - " onclick="calculator.display.value += ' - '" style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65;font-size: 30px; color: #eeff01;"></td>
+                </tr>
+                <tr style="height: 85px;">
+                    <td><input type="button" name="one" value="1" onclick="calculator.display.value += 1" style="height: 50px; width: 50px; border-radius:50%;background-color: #37cf65;font-size: 30px; color: #0300e1;"></td>
+                    <td><input type="button" name="two" value="2" onclick="calculator.display.value += 2" style="height: 50px; width: 50px; border-radius:50%;background-color: #37cf65; font-size: 30px; color: #0300e1;"></td>
+                    <td><input type="button" name="three" value="3" onclick="calculator.display.value += 3" style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65; font-size: 30px; color: #0300e1;"></td>
+                    <td><input type="button" class="operator" name="times" value=" * " onclick="calculator.display.value += ' * '" style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65;font-size: 30px; color: #eeff01;"></td>
+                </tr>
+                <tr style="height: 85px;">
+                    <td><input type="button" class="operator" name="zero" value="0" onclick="calculator.display.value += '0'" style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65;font-size: 30px; color: #0300e1;"></td>
+                    <td><input type="button" class="operator" id="clear" name="clear" value="C" onclick="calculator.display.value = ''" style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65;font-size: 30px; color: #0300e1;font-size: 30px; color: #0300e1;"></td>
+                    <td><input type="button" class="operator" name="div" value=" / " onclick="calculator.display.value += ' / ' " style="height: 50px; width: 50px;border-radius:50%;background-color: #37cf65;font-size: 30px; color: #eeff01;"></td>
+                    <td><input type="button" class="operator" name="doit" value="=" onclick="send_data()" style="height: 50px; width: 50px;border-radius:50%;background-color: #f60707;font-size: 30px; color: #0300e1;"></td>
+                    <!-- onclick="calculator.display.value = eval(calculator.display.value)" -->
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function send_data() {
+            let x = document.getElementById("result").value.split(" ")[0];
+            let y = document.getElementById("result").value.split(" ")[2];
+            let op = document.getElementById("result").value.split(" ")[1]
+
+            if (op == "/" && y == 0) {
+                alert("error");
+                document.getElementById("result").value = "";
+            }
+
+            let types = " "
+            switch (op) {
+                case "+":
+                    types = "sum"
+                    break;
+                case "-":
+                    types = "sub"
+                    break;
+                case "*":
+                    types = "mul"
+                    break;
+                case "/":
+                    types = "div"
+                    break;
+            }
+            console.log(types)
+            console.log(x)
+            console.log(y)
+            fetch('http://localhost:8080/operation?types=' + types + '&x=' + x + '&y=' + y + '')
+
+            .then(Response => Response.json())
+                .then(json => document.getElementById("result").value = json.OP)
+        }
+    </script>
+</body>
+
+</html>

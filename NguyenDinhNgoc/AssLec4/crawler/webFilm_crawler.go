@@ -3,10 +3,11 @@ package crawler
 import (
 	"fmt"
 	"net/http"
+	"sync"
+	
 	"ngoc/pkgs/connectDB"
 	"ngoc/pkgs/handleFile"
 	"ngoc/storage"
-	"sync"
 
 	"github.com/PuerkitoBio/goquery"
 )

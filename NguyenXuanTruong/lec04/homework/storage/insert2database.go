@@ -19,3 +19,16 @@ func Insert2DatabaseFilm(db *gorm.DB, ch chan Film) {
 		}
 	}
 }
+
+func Insert2DatabaseHomeDecor(db *gorm.DB, ch chan HomeDecor) {
+	for {
+		select {
+		case <-ch:
+			s := <-ch
+			db.Create(&HomeDecor{
+				Title: s.Title,
+				Price: s.Price,
+			})
+		}
+	}
+}

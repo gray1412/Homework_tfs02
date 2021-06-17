@@ -1,4 +1,4 @@
-ID: 1, NAME: Nhà tù Shawshank, RATE: 9.2
+ID: 252, NAME: Nhà tù Shawshank, RATE: 9.2
 ID: 1, NAME: Bố Già, RATE: 9.1
 ID: 2, NAME: Bố Già Phần II, RATE: 9.0
 ID: 3, NAME: Kỵ Sĩ Bóng Đêm, RATE: 9.0
@@ -164,8 +164,8 @@ ID: 162, NAME: Klaus - Câu Chuyện Giáng Sinh, RATE: 8.1
 ID: 163, NAME: V for Vendetta, RATE: 8.1
 ID: 164, NAME: The Third Man, RATE: 8.1
 ID: 165, NAME: Blade Runner, RATE: 8.1
-ID: 166, NAME: The Bridge on the River Kwai, RATE: 8.1
-ID: 167, NAME: Smultronstället, RATE: 8.1
+ID: 166, NAME: Smultronstället, RATE: 8.1
+ID: 167, NAME: The Bridge on the River Kwai, RATE: 8.1
 ID: 168, NAME: Trainspotting, RATE: 8.1
 ID: 169, NAME: Babam ve Oglum, RATE: 8.1
 ID: 170, NAME: The Truman Show, RATE: 8.1

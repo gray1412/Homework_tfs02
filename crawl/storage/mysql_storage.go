@@ -4,6 +4,13 @@ import (
 	"fmt"
 )
 
+//khoi tao cac struct de luu ba DB
+
+type YouTube struct {
+	Name_video   string `db:"name"`
+	Name_channel string `db:"channel"`
+	View         string `db:"view"`
+}
 type Item struct {
 	ID        int64  `db:"id"`
 	Title     string `db:"title"`
@@ -39,6 +46,11 @@ func ConvertItemCrawToItem(i ItemCraw) (r Item) {
 	r.ImgSrc = i.Img[0].Src
 	r.ImgWidth = i.Img[0].Width
 	r.ImgHeight = i.Img[0].Height
+	return
+}
+
+func ConvertYouTubeToString(v YouTube) (s string) {
+	s = "Name video: " + v.Name_video + ", Name channel: " + v.Name_channel + ", View:" + v.View
 	return
 }
 

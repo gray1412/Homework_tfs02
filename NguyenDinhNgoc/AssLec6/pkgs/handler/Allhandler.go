@@ -115,7 +115,7 @@ func Update(w http.ResponseWriter, r *http.Request) {
 
 	//check
 	_, err2 := data.Students[idNeedUpdate]
-	if err2 {
+	if !err2 {
 		fmt.Fprintf(w, "There is no such student !")
 		return
 	}

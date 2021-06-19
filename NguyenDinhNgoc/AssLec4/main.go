@@ -2,17 +2,16 @@ package main
 
 import (
 	"fmt"
+	"sync"
+	
 	"ngoc/crawler"
 	"ngoc/storage"
-	"sync"
 )
 
 func downloadWithGoroutine(urls []string) (MapFilm storage.Memory_Storage_Film, MapItem storage.Memory_Storage_Item) {
-	m := make(map[int64]storage.Film)
-	MapFilm.M = m
 
-	mm := make(map[int64]storage.Item)
-	MapItem.M = mm
+	MapFilm.M = make(map[int64]storage.Film)
+	MapItem.M = make(map[int64]storage.Item)
 
 	wg := sync.WaitGroup{}
 

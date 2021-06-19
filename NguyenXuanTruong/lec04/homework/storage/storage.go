@@ -8,13 +8,13 @@ type Film struct {
 	Url   string
 }
 
-// Struct HomeDecor chứa dữ liệu crawl của Shopbase
-type HomeDecor struct {
-	ID    uint
-	Title string
-	Price int
-}
+// // Struct HomeDecor chứa dữ liệu crawl của Shopbase
+// type HomeDecor struct {
+// 	ID    uint
+// 	Title string
+// 	Price int
+// }
 
-type HomeDecors struct {
-	HomeDecors []HomeDecor
-}
+// type HomeDecors struct {
+// 	HomeDecors []HomeDecor
+// }

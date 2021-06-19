@@ -10,6 +10,9 @@ import (
 )
 
 func GetData(w http.ResponseWriter, r *http.Request) {
+	db := *pkg.ConnectDB()
+	defer db.Close()
+
 	params := mux.Vars(r)
 	id, err := strconv.Atoi(params["id"])
 
@@ -18,11 +21,12 @@ func GetData(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	for _, data := range storage.Datas {
-		if data.Id == uint(id) {
-			pkg.ResponseWithJson(w, http.StatusOK, data)
-			return
-		}
+	var data []storage.Data
+	db.Find(&data, uint(id))
+
+	for _, data := range data {
+		pkg.ResponseWithJson(w, http.StatusOK, data)
+		return
 	}
-	pkg.ResponseWithJson(w, http.StatusNotFound, map[string]string{"message": "Todo not found"})
+	pkg.ResponseWithJson(w, http.StatusNotFound, map[string]string{"message": "Data not found"})
 }

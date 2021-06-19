@@ -10,6 +10,9 @@ import (
 )
 
 func DeleteData(w http.ResponseWriter, r *http.Request) {
+	db := *pkg.ConnectDB()
+	defer db.Close()
+
 	params := mux.Vars(r)
 	id, err := strconv.Atoi(params["id"])
 
@@ -18,13 +21,7 @@ func DeleteData(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	for i, data := range storage.Datas {
-		if data.Id == uint(id) {
-			storage.Datas = append(storage.Datas[:i], storage.Datas[i+1:]...)
-			pkg.ResponseWithJson(w, http.StatusOK, map[string]string{"message": "Todo was deleted"})
-			return
-		}
-	}
-
-	pkg.ResponseWithJson(w, http.StatusNotFound, map[string]string{"message": "Todo not found"})
+	idDel := uint(id)
+	var datas []storage.Data
+	db.Delete(&datas, idDel) //xoa tu bang data where id=id
 }

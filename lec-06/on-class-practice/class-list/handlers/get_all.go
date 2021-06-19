@@ -13,5 +13,8 @@ func GetAllData(w http.ResponseWriter, r *http.Request) {
 		db.CreateTable(&storage.Data{})
 	}
 
-	pkg.ResponseWithJson(w, http.StatusOK, storage.Datas)
+	var datas []storage.Data
+	db.Find(&datas) //lay tat ca du lieu cua bang data
+	pkg.ResponseWithJson(w, http.StatusOK, datas)
+
 }

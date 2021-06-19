@@ -11,66 +11,45 @@ import (
 	"github.com/gorilla/mux"
 )
 
-type object struct {
-	ID   int    `json:"id"`
-	Name string `json:"name"`
+//response with http Status Code and Message or Object
+func responseWithJson(w http.ResponseWriter, httpStatusCode int, object interface{}) {
+	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+
+	w.WriteHeader(httpStatusCode)
+	//response with json
+	json.NewEncoder(w).Encode(object)
 }
 
-func ParseRequestBodyToObject(w http.ResponseWriter, r *http.Request) {
-	newObject := object{}                             //Tạo sẵn một đối tượng rỗng để Parse Json trong r.body vào
-	err := json.NewDecoder(r.Body).Decode(&newObject) //Parse to newObject
-	if err != nil {
-		responseWithJson(w, http.StatusBadRequest, map[string]string{"message": "Invalid body"})
-		return
-	}
-	//nếu thành công thì có thể
-	fmt.Fprintf(w, "hello %v", newObject.Name)
-
-	//nếu muốn chuyển từ object sang json và nạp vào w
-	json.NewEncoder(w).Encode(newObject)
-}
-
-func responseWithJson(writer http.ResponseWriter, status int, object interface{}) {
-	writer.Header().Set("Content-Type", "application/json")
-	writer.WriteHeader(status)
-	json.NewEncoder(writer).Encode(object)
-}
 func ReadbyID(w http.ResponseWriter, r *http.Request) {
+	//get ID
 	vars := mux.Vars(r)
-	// id := vars["id"]
+	id, _ := strconv.Atoi(vars["id"])
 
-	// //convert to int
-	// idint, _ := strconv.Atoi(id)
-
-	idint, _ := strconv.Atoi(vars["id"])
-	fmt.Println(idint)
 	//find
-	student, err := data.Students[idint]
+	student, err := data.Students[id]
 	if !err {
 		fmt.Println(err)
 		fmt.Fprintf(w, "No rerult !")
 		return
 	}
-	//convert student to json
-	// ret, _ := json.Marshal(&student)
-	//đóng vào reponse
-	//cách 1
-	// fmt.Fprintf(w, string(ret))
-	//cách 2
-	json.NewEncoder(w).Encode(student)
-	fmt.Println(data.Students)
+
+	//response
+	responseWithJson(w, http.StatusOK, student)
+
+	fmt.Println(student)
 }
 
 func ReadAll(w http.ResponseWriter, r *http.Request) {
-	// for _, student := range data.Students {
-	// 	studentJson, _ := json.Marshal(&student)
-	// 	fmt.Fprintf(w, string(studentJson)+"\n")
-	// }
-	json.NewEncoder(w).Encode(data.Students)
+	//response
+	responseWithJson(w, http.StatusOK, data.Students)
+
 	fmt.Println(data.Students)
 }
 func Create(w http.ResponseWriter, r *http.Request) {
-	newStudent := storage.Student{}
+	//read body with Claim: Content-Type: application/json
+	var newStudent storage.Student
 	err := json.NewDecoder(r.Body).Decode(&newStudent)
 	if err != nil {
 		responseWithJson(w, http.StatusBadRequest, map[string]string{"message": "Invalid body"})
@@ -81,7 +60,7 @@ func Create(w http.ResponseWriter, r *http.Request) {
 	//check
 	_, err2 := data.Students[idCreate]
 	if err2 {
-		fmt.Fprintf(w, "ID has been used !")
+		responseWithJson(w, http.StatusOK, map[string]string{"message": "ID has been used !"})
 		return
 	}
 
@@ -95,28 +74,19 @@ func Create(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(data.Students)
 }
 func Update(w http.ResponseWriter, r *http.Request) {
-	// params := mux.Vars(r)
-	// id, err := strconv.Atoi(params["id"])
-
-	// if err != nil {
-	// 	responseWithJson(w, http.StatusBadRequest, map[string]string{"message": "Invalid todo id"})
-	// 	return
-	// }
-
+	//read body with Claim: Content-Type: application/json
 	var updateStudent storage.Student
 	err := json.NewDecoder(r.Body).Decode(&updateStudent)
-
 	if err != nil {
 		responseWithJson(w, http.StatusBadRequest, map[string]string{"message": "Invalid body"})
 		return
 	}
 
 	idNeedUpdate := updateStudent.ID
-
 	//check
 	_, err2 := data.Students[idNeedUpdate]
 	if !err2 {
-		fmt.Fprintf(w, "There is no such student !")
+		responseWithJson(w, http.StatusOK, map[string]string{"message": "There is no such student !"})
 		return
 	}
 
@@ -128,29 +98,18 @@ func Update(w http.ResponseWriter, r *http.Request) {
 
 	//print
 	fmt.Println(data.Students)
-
-	// for i := range data.Students {
-	// 	if i == 1 {
-	// 		data.Students[i] = updateStudent
-	// 		responseWithJson(w, http.StatusOK, updateStudent)
-	// 		fmt.Println(data.Students)
-	// 		return
-	// 	}
-	// }
-	// fmt.Println(data.Students)
-	// responseWithJson(w, http.StatusNotFound, map[string]string{"message": "Todo not found"})
 }
 
+//middleware
 const JsonContentType = "application/json"
 
 func ContentTypeCheckingMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		reqContentType := r.Header.Get("Content-Type")
 		if reqContentType != JsonContentType {
-			fmt.Fprintf(w, "request only allow content type: application/json")
+			responseWithJson(w, http.StatusBadRequest, map[string]string{"message": "Request only allow content type: application/json !"})
 			return
 		}
-
 		next.ServeHTTP(w, r)
 	})
 

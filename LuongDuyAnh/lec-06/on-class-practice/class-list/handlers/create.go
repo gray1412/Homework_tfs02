@@ -21,10 +21,8 @@ func CreateData(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	newData.Id = pkg.GenerateId(storage.Datas)
-	storage.Datas = append(storage.Datas, newData)
-	pkg.ResponseWithJson(w, http.StatusCreated, newData)
-
 	//them vao DB
 	db.Create(newData)
+	pkg.ResponseWithJson(w, http.StatusCreated, newData)
+
 }

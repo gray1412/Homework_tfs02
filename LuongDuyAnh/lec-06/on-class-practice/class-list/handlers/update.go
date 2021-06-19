@@ -11,28 +11,19 @@ import (
 )
 
 func UpdateData(w http.ResponseWriter, r *http.Request) {
+	db := *pkg.ConnectDB() //ket noi DB
+	defer db.Close()
+
 	params := mux.Vars(r)
-	id, err := strconv.Atoi(params["id"])
+	_, err := strconv.Atoi(params["id"])
 
 	if err != nil {
-		pkg.ResponseWithJson(w, http.StatusBadRequest, map[string]string{"message": "Invalid todo id"})
+		pkg.ResponseWithJson(w, http.StatusBadRequest, map[string]string{"message": "Invalid id"})
 		return
 	}
 
-	var updateData storage.Data
-	if err := json.NewDecoder(r.Body).Decode(&updateData); err != nil {
-		pkg.ResponseWithJson(w, http.StatusBadRequest, map[string]string{"message": "Invalid body"})
-		return
-	}
-	updateData.Id = uint(id)
+	var data storage.Data
+	json.NewDecoder(r.Body).Decode(&data)
+	db.Save(&data)
 
-	for i, data := range storage.Datas {
-		if data.Id == uint(id) {
-			storage.Datas[i] = updateData
-			pkg.ResponseWithJson(w, http.StatusOK, updateData)
-			return
-		}
-	}
-
-	pkg.ResponseWithJson(w, http.StatusNotFound, map[string]string{"message": "Todo not found"})
 }

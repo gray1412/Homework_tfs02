@@ -1,0 +1,77 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TFS2</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="title">Danh sách thành viên của TFS2</div>
+      <div class="add-member">
+        Thêm thành viên mới <a href="addMember.html">Tại đây</a>
+      </div>
+      <div class="list-member">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Phone</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="render-data"></tbody>
+        </table>
+      </div>
+      <div id="member-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <div class="update-info-member">
+            <div class="title" id="member-title"></div>
+          </div>
+          <div class="form-update-member">
+            <form id="form-update">
+              <div class="form-flex">
+                <div class="input-flex">
+                  <span
+                    >Name*: <input placeholder="Name" type="text" name="name"
+                  /></span>
+                </div>
+
+                <div class="input-flex">
+                  <span
+                    >Age*: <input placeholder="Age" type="text" name="age"
+                  /></span>
+                </div>
+
+                <div class="input-flex">
+                  <span
+                    >Gender*:
+                    <input placeholder="Gender" type="text" name="gender"
+                  /></span>
+                </div>
+
+                <div class="input-flex">
+                  <span>
+                    Phone*:
+                    <input placeholder="Phone" type="text" name="phone" />
+                  </span>
+                </div>
+                <div class="submit-wrapper">
+                  <button type="submit">Thay đổi</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

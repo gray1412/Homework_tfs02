@@ -14,7 +14,6 @@ import (
 
 func CrawFilm() {
 	Storage.MigrateFilm()
-
 	quit := make(chan bool)
 	channel := make(chan Storage.Imdb)
 	go crawlImdb(channel)

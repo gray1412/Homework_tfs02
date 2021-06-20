@@ -1,0 +1,158 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  color: #383f4e;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 3rem;
+}
+
+.add-member {
+  color: #707070;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+.add-member a {
+  color: #8bb1eb;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+table button {
+  color: #fafafa;
+  border-radius: 4%;
+  font-weight: 600;
+  background-color: #ffffff;
+  border: none;
+  height: 2rem;
+  width: 3rem;
+}
+table button:hover {
+  cursor: pointer;
+  outline: none;
+}
+
+#center {
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.add {
+  width: 50%;
+  padding-top: 1rem;
+  margin-bottom: 10rem;
+}
+.input-title {
+  margin-bottom: 0.5rem;
+}
+
+#form-register input {
+  height: 2rem;
+  width: 100%;
+  font-size: 18px;
+  padding-left: 1rem;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .add {
+    width: 90%;
+  }
+  .input-flex{
+    width: 100% !important;
+  }
+}
+
+.submit-wrapper{
+    text-align: center;
+}
+
+.submit-wrapper button{
+    /* margin-top: 1rem; */
+    width: 12rem;
+    height: 2rem;
+    background-color: #a2d5f2;
+    color: #fafafa;
+    font-weight: 650;
+    border: none;
+    border-radius: 4px;
+}
+
+.submit-wrapper  button:hover{
+    cursor: pointer;
+    background-color: #07689f
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-flex{
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  justify-content: space-around;
+}
+.form-flex .input-flex{
+  width: 48%;
+}
+.form-update-member input{
+  width: 100%;
+    height: 2rem;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}

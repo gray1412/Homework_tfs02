@@ -6,14 +6,29 @@ import (
 	"net/http"
 	"strconv"
 
-	"lec06-hw/db"
+	"lec06-hw/database"
 
 	"github.com/gorilla/mux"
 )
 
+var db = database.ConnectDb()
+
+func init() {
+	var students = []database.Student{}
+	db.CreateTable(&students)
+	newStudent := database.Student{
+		Id:   1,
+		Name: "test",
+		Age:  5,
+	}
+	db.Create(&newStudent)
+}
+
 func GetAll(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(db.Class)
+	var students = []database.Student{}
+	results := db.Find(&students)
+	json.NewEncoder(w).Encode(results.Value)
 }
 
 func GetById(w http.ResponseWriter, r *http.Request) {
@@ -22,26 +37,33 @@ func GetById(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, _ := strconv.Atoi(vars["id"])
 
-	//Check if id is out of range
-	if id >= 0 && id >= len(db.Class) {
-		fmt.Fprintf(w, "No element at id %v", id)
+	student := database.Student{}
+	result := db.First(&student, id)
+
+	if result.Error != nil {
+		fmt.Fprintf(w, "No entry at id %v", id)
 		return
 	}
 
-	json.NewEncoder(w).Encode(db.Class[id])
+	json.NewEncoder(w).Encode(result.Value)
 }
 
 func AddOne(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
 
-	newStudent := db.Student{}
+	newStudent := database.Student{}
 
 	if err := json.NewDecoder(r.Body).Decode(&newStudent); err != nil {
 		fmt.Fprintf(w, "error when parsing body %v", err)
 		return
 	}
-	db.Class = append(db.Class, newStudent)
 
-	fmt.Fprintf(w, "Added %v, Current: %v", newStudent, db.Class)
+	if result := db.Create(&newStudent); result.Error != nil {
+		fmt.Fprintf(w, "Couldn't add %v. Error: %v", newStudent, result.Error)
+		return
+	}
+
+	fmt.Fprintf(w, "Added %v", newStudent)
 }
 
 func UpdateById(w http.ResponseWriter, r *http.Request) {
@@ -50,22 +72,21 @@ func UpdateById(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, _ := strconv.Atoi(vars["id"])
 
-	newStudent := db.Student{}
-
-	//Check if id is out of range
-	if id >= 0 && id >= len(db.Class) {
-		fmt.Fprintf(w, "No element at id %v", id)
+	student := database.Student{}
+	result := db.First(&student, id)
+	if result.Error != nil {
+		fmt.Fprintf(w, "No entry at id %v", id)
 		return
 	}
 
-	if err := json.NewDecoder(r.Body).Decode(&newStudent); err != nil {
+	if err := json.NewDecoder(r.Body).Decode(&student); err != nil {
 		fmt.Fprintf(w, "error when parsing body %v", err)
 		return
 	}
 
-	db.Class[id] = newStudent
+	db.Save(&student)
 
-	fmt.Fprintf(w, "student at id %v changed to %v", id, db.Class[id])
+	fmt.Fprintf(w, "Updated id %v to %v", id, student)
 }
 
 func DeleteById(w http.ResponseWriter, r *http.Request) {
@@ -74,9 +95,11 @@ func DeleteById(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, _ := strconv.Atoi(vars["id"])
 
-	//Check if id is out of range
-	if id >= 0 && id >= len(db.Class) {
-		fmt.Fprintf(w, "No element at id %v", id)
+	student := database.Student{}
+	result := db.Delete(&student, id)
+	if result.Error != nil {
+		fmt.Fprintf(w, "No entry at id %v", id)
 		return
 	}
+	fmt.Fprintf(w, "Deleted id %v", id)
 }

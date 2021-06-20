@@ -14,6 +14,7 @@ func PathStudent() {
 	r.Methods(http.MethodPost).Path("/students").HandlerFunc(addStudent)
 	r.Methods(http.MethodPut).Path("/students").HandlerFunc(updateStudent)
 	r.Methods(http.MethodDelete).Path("/students").HandlerFunc(deleteStudent)
+	r.Use(contentTypeJson)
 	http.Handle("/", r)
 	http.ListenAndServe(":8000", nil)
 }
@@ -58,8 +59,18 @@ func deleteStudent(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	fmt.Print(s)
 	db := Api.Connect()
 	var Students = Api.Students{Id: s.Id}
 	db.Delete(&Students)
+}
+func contentTypeJson(next http.Handler) http.Handler {
+	const contentType = "application/json"
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		reqContentType := r.Header.Get("Content-Type")
+		if reqContentType != contentType {
+			fmt.Fprintf(w, "Only allow request with content type %v", contentType)
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
 }

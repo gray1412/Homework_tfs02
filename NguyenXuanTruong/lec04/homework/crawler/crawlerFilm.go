@@ -1,15 +1,17 @@
-package pkg
+package crawler
 
 import (
+	"fmt"
 	"log"
-	"time"
 
+	S "Crawl/storage"
 	//Thao tác với SQL
 	//Xử lý thời gian
-	_ "github.com/go-sql-driver/mysql" //Tạo driver kết nối mysql
+	//_ "github.com/go-sql-driver/mysql" //Tạo driver kết nối mysql
+	"github.com/gocolly/colly"
 )
 
-func crawl(ch chan Film) {
+func CrawlerFilm(ch chan S.Film) {
 	c := colly.NewCollector()
 
 	//Đang gửi request get HTML
@@ -27,7 +29,7 @@ func crawl(ch chan Film) {
 	})
 
 	c.OnHTML(".lister-list tr", func(e *colly.HTMLElement) {
-		f := Film{}
+		f := S.Film{}
 		f.Name = e.ChildText(".titleColumn")         // Tìm đến thẻ con .titleColumn và lấy nội dung
 		f.Image = e.ChildAttr(" img", "src")         // Tìm đến thẻ con .posterColumn img và lấy nội dung trong "src"
 		f.Rate = e.ChildText(".ratingColumn strong") // Tìm đến thẻ con .ratingColumn có thuộc tính strong và lấy nội dung

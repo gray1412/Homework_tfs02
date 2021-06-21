@@ -6,15 +6,21 @@ import (
 	"tfs-02/lec-06/on-class-practice/class-list/handlers"
 
 	"github.com/gorilla/mux"
+	"github.com/rs/cors"
 )
 
 func main() {
 	router := mux.NewRouter().StrictSlash(true)
-	router.HandleFunc("/create/student", handlers.CreateData).Methods(http.MethodPost)
-	router.HandleFunc("/delete/student/{id}", handlers.DeleteData).Methods(http.MethodDelete)
-	router.HandleFunc("/get/students", handlers.GetAllData).Methods(http.MethodGet)
-	router.HandleFunc("/get/student/{id}", handlers.GetData).Methods(http.MethodGet)
-	router.HandleFunc("/update/student/{id}", handlers.UpdateData).Methods(http.MethodPut)
+	router.HandleFunc("/api/students", handlers.CreateData).Methods(http.MethodPost)
+	router.HandleFunc("/api/students/{id:(?:\\d+)}", handlers.DeleteData).Methods(http.MethodDelete)
+	router.HandleFunc("/api/students", handlers.GetAllData).Methods(http.MethodGet)
+	router.HandleFunc("/api/students/{id:(?:\\d+)}", handlers.GetData).Methods(http.MethodGet)
+	router.HandleFunc("/api/students/{id:(?:\\d+)}", handlers.UpdateData).Methods(http.MethodPut)
 
-	log.Fatal(http.ListenAndServe(":8082", router))
+	handler := cors.New(cors.Options{
+		AllowedMethods: []string{"GET", "POST", "DELETE", "PATCH", "OPTIONS"},
+	}).Handler(router)
+
+	log.Fatal(http.ListenAndServe(":8082", handler))
+
 }

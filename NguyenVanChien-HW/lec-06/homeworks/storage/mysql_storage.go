@@ -3,13 +3,15 @@ package storage
 import (
 	"fmt"
 
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm"
 )
 
 type Product struct {
 	Id          int    `json:"id"`
 	Name        string `json: "name"`
-	Price       int    `json: "price"`
+	Price       string `json: "price"`
 	Img         string `json:"img"`
 	Description string `json:"description"`
 }
@@ -24,7 +26,7 @@ func ConnectDatabase() (db *gorm.DB) {
 		"tcp",
 		"localhost",
 		"3306",
-		"studenttfs",
+		"testproducts",
 	)
 	db, err := gorm.Open("mysql", mysqlCredentials) // Mở database
 
@@ -35,8 +37,8 @@ func ConnectDatabase() (db *gorm.DB) {
 }
 
 func CreateTableProduct() {
-	db := ConnectDatabase()
-	defer db.Close()
+	db := *ConnectDatabase()
+	// defer db.Close()
 	if (!db.HasTable(&Product{})) {
 		db.CreateTable(&Product{})
 	} else {

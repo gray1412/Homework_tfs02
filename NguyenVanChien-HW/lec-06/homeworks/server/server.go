@@ -17,7 +17,15 @@ func RunServer() {
 
 	router := mux.NewRouter().StrictSlash(true)
 	//create product table
-	storage.CreateTableProduct()
+	// storage.CreateTableProduct()
+	db := *storage.ConnectDatabase()
+	// defer db.Close()
+	if (!db.HasTable(&storage.Product{})) {
+		db.CreateTable(&storage.Product{})
+	} else {
+		db.DropTable(&storage.Product{})
+		db.CreateTable(&storage.Product{})
+	}
 
 	router.Use(handler.ContenTypeCheckingMiddleware)
 

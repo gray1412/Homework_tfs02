@@ -33,13 +33,6 @@ func ContentHeaderType(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello with content type %v", contentHeaderType)
 }
 
-func GetStudent(w http.ResponseWriter, r *http.Request) {
-	// connect database to get infor students
-	db := storage.ConnectDatabase()
-	defer db.Close()
-
-}
-
 func CreateProduct(w http.ResponseWriter, r *http.Request) {
 	// get data from json body
 	product := storage.Product{}
@@ -49,7 +42,7 @@ func CreateProduct(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	// connect database and add new student to it
-	db := storage.ConnectDatabase()
+	db := *storage.ConnectDatabase()
 	defer db.Close()
 
 	// check if id has available
@@ -60,7 +53,7 @@ func CreateProduct(w http.ResponseWriter, r *http.Request) {
 	}
 	// save to database and memory
 	storage.Products[product.Id] = product
-	db.Create(&productCheck)
+	db.Create(&product)
 	fmt.Println("Created succesful !")
 }
 

@@ -6,7 +6,7 @@ import (
 )
 
 func ContentTypeChecking(next http.Handler) http.Handler {
-	const contentType = "application/json"
+	const contentType = "application/json;charset=UTF-8"
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		reqContentType := r.Header.Get("Content-Type")
 

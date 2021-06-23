@@ -8,7 +8,7 @@ addMemberForm.addEventListener(`submit`, async (e) => {
     phone: addMemberForm.phone.value,
   };
   console.log(memberInfo);
-  const response = await fetch(`http://localhost:8000/api/member?name=${memberInfo.name}&age=${memberInfo.age}&phone=${memberInfo.phone}&gender=${memberInfo.gender}`, {
+  const response = await fetch(`http://localhost:8000/api/members?name=${memberInfo.name}&age=${memberInfo.age}&phone=${memberInfo.phone}&gender=${memberInfo.gender}`, {
     method: 'POST',
   });
   const log = await response.json();

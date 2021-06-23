@@ -13,7 +13,6 @@ import (
 
 var db = database.ConnectDb()
 
-
 type Tfs2 struct {
 	Id     int `gorm:"primary_key"`
 	Name   string
@@ -44,6 +43,21 @@ func GetMembers(w http.ResponseWriter, r *http.Request) {
 	Tfs2Members := db.Where("class = ?", Tfs2).Find(&members).Value
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(Tfs2Members)
+}
+
+func GetOneMember(w http.ResponseWriter, r *http.Request) {
+	// Get URL parameter from mux
+	vars := mux.Vars(r)
+	id, _ := strconv.Atoi(vars["id"])
+	// Test if the TodoItem exist in DB
+	member := &Tfs2{}
+	result := db.First(&member, id)
+	if result.Error != nil {
+		log.Warn("Member is not in class")
+	} else {
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(member)
+	}
 }
 
 func GetMemberByID(Id int) bool {

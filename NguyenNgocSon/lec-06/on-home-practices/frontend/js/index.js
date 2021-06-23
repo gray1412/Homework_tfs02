@@ -38,7 +38,7 @@ fetchData();
 // xoa member
 const deleteMember = async (id) => {
   const response = await fetch(
-    `http://localhost:8000/api/member/${id}/delete`,
+    `http://localhost:8000/api/members/${id}/delete`,
     {
       method: "DELETE",
     }
@@ -65,7 +65,7 @@ const openModal = async (id) => {
     };
     console.log(memberInfo);
     const response = await fetch(
-      `http://localhost:8000/api/member/${id}/profile?name=${memberInfo.name}&age=${memberInfo.age}&phone=${memberInfo.phone}&gender=${memberInfo.gender}`,
+      `http://localhost:8000/api/members/${id}/profile?name=${memberInfo.name}&age=${memberInfo.age}&phone=${memberInfo.phone}&gender=${memberInfo.gender}`,
       {
         method: "PUT",
       }

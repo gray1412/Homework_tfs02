@@ -4,28 +4,29 @@ type Person struct {
 	ID     uint   `gorm:"primaryKey"`
 	Name   string `json: "name"`
 	Age    int    `json: "age"`
-	TypeID []Type `gorm:"foreignKey:TypeID;associationForeignKey:ID"`
+	TypeID uint
 }
 type Type struct {
-	ID          uint   `gorm:"primaryKey"`
-	Type        string `json: "type"`
-	Email       string `json: "email"`
-	Description string `json: "description"`
+	ID          uint     `gorm:"primaryKey"`
+	Type        string   `json: "type"`
+	Email       string   `json: "email"`
+	Description string   `json: "description"`
+	Person      []Person `gorm:"foreignKey:TypeID;associationForeignKey:ID"`
 }
 type Registration struct {
-	ID       uint   `gorm:"primaryKey"`
+	ID       uint     `gorm:"primaryKey"`
 	PersonID []Person `gorm:"foreignKey:PersonID;associationForeignKey:ID"`
 }
 type Class struct {
-	ID       uint   `gorm:"primaryKey"`
-	Name     string `json: "name"`
+	ID       uint     `gorm:"primaryKey"`
+	Name     string   `json: "name"`
 	LessonID []Lesson `gorm:"foreignKey:LessonID;associationForeignKey:ID"`
 }
 type Lesson struct {
-	ID        uint    `gorm:"primaryKey"`
-	Name      string  `json: "name"`
-	StartTime string  `json: "starttime"`
-	EndTime   string  `json: "endtime"`
+	ID        uint      `gorm:"primaryKey"`
+	Name      string    `json: "name"`
+	StartTime string    `json: "starttime"`
+	EndTime   string    `json: "endtime"`
 	SubjectID []Subject `gorm:"foreignKey:SubjectID;associationForeignKey:ID"`
 	RoomID    []Room    `gorm:"foreignKey:RoomID;associationForeignKey:ID"`
 	PersonID  []Person  `gorm:"foreignKey:PersonID;associationForeignKey:ID"`

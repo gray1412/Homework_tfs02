@@ -15,7 +15,7 @@ var server = controllers.Server{}
 
 func Run() {
 
-	var err = godotenv.Load()
+	var err = godotenv.Load(os.ExpandEnv("../.env"))
 	if err != nil {
 		log.Fatalf("Error getting env, not comming through %v", err)
 	} else {

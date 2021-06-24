@@ -27,6 +27,7 @@ require (
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
 	golang.org/x/net v0.0.0-20210614182718-04defd469f4e // indirect
 	google.golang.org/appengine v1.6.7 // indirect
+	gopkg.in/go-playground/assert.v1 v1.2.1
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 	gorm.io/driver/mysql v1.1.1
 	gorm.io/gorm v1.21.11

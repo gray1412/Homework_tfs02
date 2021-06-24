@@ -79,16 +79,22 @@ func (server *Server) GetUser(w http.ResponseWriter, r *http.Request) {
 func (server *Server) UpdateUser(w http.ResponseWriter, r *http.Request) {
 
 	vars := mux.Vars(r)
+
+	// Check if the post id is valid
 	uid, err := strconv.ParseUint(vars["id"], 10, 32)
 	if err != nil {
 		utils.ERROR(w, http.StatusBadRequest, err)
 		return
 	}
+
+	// Read the data users
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		utils.ERROR(w, http.StatusUnprocessableEntity, err)
 		return
 	}
+
+	// Start processing the request data
 	user := models.User{}
 	err = json.Unmarshal(body, &user)
 	if err != nil {

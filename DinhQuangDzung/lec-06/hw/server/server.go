@@ -2,10 +2,11 @@ package server
 
 import (
 	"fmt"
+	"lec06-hw/controller"
+	"lec06-hw/middleware"
 	"net/http"
 
-	"lec06-hw/handler"
-	"lec06-hw/middleware"
+	"github.com/rs/cors"
 
 	"github.com/gorilla/mux"
 )
@@ -17,13 +18,19 @@ func RunServer() {
 
 	router.Use(middleware.ContentTypeChecking)
 
-	router.Methods("GET").Path("/students").HandlerFunc(handler.GetAll)
-	router.Methods("GET").Path("/students/{id:[0-9]+}").HandlerFunc(handler.GetById)
-	router.Methods("POST").Path("/students").HandlerFunc(handler.AddOne)
-	router.Methods("PUT").Path("/students/{id:[0-9]+}").HandlerFunc(handler.UpdateById)
-	router.Methods("DELETE").Path("/students/{id:[0-9]+}").HandlerFunc(handler.DeleteById)
+	c := cors.New(cors.Options{
+		AllowedOrigins: []string{"*"},
+		AllowedHeaders: []string{"*"},
+	})
+	handler := c.Handler(router)
 
-	err := http.ListenAndServe(":8080", router)
+	router.Methods("GET").Path("/students").HandlerFunc(controller.GetAll)
+	router.Methods("GET").Path("/students/{id:[0-9]+}").HandlerFunc(controller.GetById)
+	router.Methods("POST").Path("/students").HandlerFunc(controller.AddOne)
+	router.Methods("PUT").Path("/students/{id:[0-9]+}").HandlerFunc(controller.UpdateById)
+	router.Methods("DELETE").Path("/students/{id:[0-9]+}").HandlerFunc(controller.DeleteById)
+
+	err := http.ListenAndServe(":8080", handler)
 	if err != nil {
 		panic(err)
 	}

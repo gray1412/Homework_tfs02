@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"tfs-02/lec-06/on-class-practice/class-list/storage"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
@@ -34,14 +33,4 @@ func ResponseWithJson(w http.ResponseWriter, status int, object interface{}) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(status)
 	json.NewEncoder(w).Encode(object)
-}
-
-func GenerateId(data []storage.Data) uint {
-	var maxId uint
-	for _, data := range data {
-		if data.Id > maxId {
-			maxId = data.Id
-		}
-	}
-	return maxId + 1
 }

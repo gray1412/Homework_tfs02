@@ -11,6 +11,7 @@ type YouTube struct {
 	Name_channel string `db:"channel"`
 	View         string `db:"view"`
 }
+
 type Item struct {
 	ID        int64  `db:"id"`
 	Title     string `db:"title"`

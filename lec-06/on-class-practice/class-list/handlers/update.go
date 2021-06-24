@@ -15,7 +15,7 @@ func UpdateData(w http.ResponseWriter, r *http.Request) {
 	defer db.Close()
 
 	params := mux.Vars(r)
-	_, err := strconv.Atoi(params["id"])
+	id, err := strconv.Atoi(params["id"])
 
 	if err != nil {
 		pkg.ResponseWithJson(w, http.StatusBadRequest, map[string]string{"message": "Invalid id"})
@@ -23,6 +23,7 @@ func UpdateData(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var data storage.Data
+	db.Find(&data, uint(id))
 	json.NewDecoder(r.Body).Decode(&data)
 	db.Save(&data)
 

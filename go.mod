@@ -16,7 +16,6 @@ require (
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/gorilla/mux v1.8.0
 	github.com/jinzhu/gorm v1.9.16
-	github.com/jinzhu/now v1.1.2 // indirect
 	github.com/kennygrant/sanitize v1.2.4 // indirect
 	github.com/rs/cors v1.7.0
 	github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca // indirect
@@ -25,4 +24,6 @@ require (
 	golang.org/x/net v0.0.0-20210614182718-04defd469f4e // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
+	gorm.io/driver/mysql v1.1.1
+	gorm.io/gorm v1.21.11
 )

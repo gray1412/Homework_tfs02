@@ -1,4 +1,4 @@
-package handler
+package controller
 
 import (
 	"encoding/json"
@@ -26,6 +26,7 @@ func init() {
 
 func GetAll(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+
 	var students = []database.Student{}
 	results := db.Find(&students)
 	json.NewEncoder(w).Encode(results.Value)

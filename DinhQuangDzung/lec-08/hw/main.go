@@ -6,6 +6,8 @@ import (
 	"os"
 
 	"lec08-hw/database"
+
+	"gorm.io/gorm"
 )
 
 type CsvLine struct {
@@ -40,7 +42,8 @@ func main() {
 		}
 		s = append(s, data)
 	}
-	fmt.Println("Row:", len(s))
+	db = db.Session(&gorm.Session{CreateBatchSize: 1000})
+	db.Create(s)
 
 	fmt.Println("Done...!")
 }

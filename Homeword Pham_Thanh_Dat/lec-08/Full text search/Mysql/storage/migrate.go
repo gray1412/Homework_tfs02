@@ -1,5 +1,5 @@
 package storage
 
 func Migrate() {
-	CreateTable()
+	CreateReview()
 }

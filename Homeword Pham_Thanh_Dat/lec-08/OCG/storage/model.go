@@ -1,58 +1,64 @@
 package storage
 
 import (
-	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"gorm.io/gorm"
 )
 
 type Role struct {
 	gorm.Model
-	Role        string `json:"role"`
-	Description string `json:"description"`
+	Role        string   `json:"role"`
+	Description string   `json:"description"`
+	Person      []Person `gorm:"foreignKey:RoleID;associationForeignKey:ID"`
 }
 type Person struct {
 	gorm.Model
-	FirstName string `json:"firstName"`
-	LastName  string `json:"lastName"`
-	Address   string `json:"address"`
-	Email     string `json:"email"`
-	Phone     int    `json:"phone"`
-	Age       int    `json:"age"`
-	Role      []Role `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+	FirstName    string         `json:"firstName"`
+	LastName     string         `json:"lastName"`
+	Address      string         `json:"address"`
+	Email        string         `json:"email"`
+	Phone        int            `json:"phone"`
+	Age          int            `json:"age"`
+	RoleID       int            `json:"role"`
+	Registration []Registration `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }
 type Course struct {
 	gorm.Model
-	Name        string `json:"name"`
-	Description string `json:"description"`
+	Name        string  `json:"name"`
+	Description string  `json:"description"`
+	Class       []Class `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }
 type Class struct {
 	gorm.Model
-	Name        string   `json:"name"`
-	Description string   `json:"description"`
-	Course      []Course `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+	Name         string `json:"name"`
+	Description  string `json:"description"`
+	CourseID     uint
+	Registration []Registration `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+	Slot         []Slot         `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }
 type Registration struct {
 	gorm.Model
-	Person []Person `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
-	Class  []Class  `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+	PersonID uint
+	ClassID  uint
 }
 type Lession struct {
 	gorm.Model
-	Name        string   `json:"name"`
-	Description string   `json:"description"`
-	Course      []Course `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	CourseID    uint
+	Slot        []Slot `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }
 type Room struct {
 	gorm.Model
-	Floor  int      `json:"floor"`
-	Course []Course `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+	Floor    int `json:"floor"`
+	CourseID uint
+	Slot     []Slot `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }
 type Slot struct {
 	gorm.Model
-	Name      string    `json:"name"`
-	StartTime string    `json:"startTime"`
-	EndTime   string    `json:"endTime"`
-	Class     []Class   `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
-	Lession   []Lession `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
-	Room      []Room    `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+	Name      string `json:"name"`
+	StartTime string `json:"startTime"`
+	EndTime   string `json:"endTime"`
+	ClassID   uint
+	LessionID uint
+	RoomID    uint
 }

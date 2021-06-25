@@ -1,62 +1,17 @@
 package storage
 
 import (
-	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
 )
 
 func Connect() *gorm.DB {
-	db, err := gorm.Open("mysql", "root:@/ocg?charset=utf8&parseTime=True&loc=Local")
-	if err != nil {
-		panic("failed to connect database")
-	}
+	dsn := "root:@tcp(127.0.0.1:3306)/ocg?charset=utf8mb4&parseTime=True&loc=Local"
+	db, _ := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	return db
 }
-func CreateRole() {
+
+func CreateTable() {
 	db := Connect()
-	if db.HasTable(&Role{}) == false {
-		db.CreateTable(&Role{})
-	}
-}
-func CreateCourse() {
-	db := Connect()
-	if db.HasTable(&Course{}) == false {
-		db.CreateTable(&Course{})
-	}
-}
-func CreateRoom() {
-	db := Connect()
-	if db.HasTable(&Room{}) == false {
-		db.CreateTable(&Room{})
-	}
-}
-func CreateLesstion() {
-	db := Connect()
-	if db.HasTable(&Lession{}) == false {
-		db.CreateTable(&Lession{})
-	}
-}
-func CreatePerson() {
-	db := Connect()
-	if db.HasTable(&Person{}) == false {
-		db.CreateTable(&Person{})
-	}
-}
-func CreateClass() {
-	db := Connect()
-	if db.HasTable(&Class{}) == false {
-		db.CreateTable(&Class{})
-	}
-}
-func CreateRegistration() {
-	db := Connect()
-	if db.HasTable(&Registration{}) == false {
-		db.CreateTable(&Registration{})
-	}
-}
-func CreateSlot() {
-	db := Connect()
-	if db.HasTable(&Slot{}) == false {
-		db.CreateTable(&Slot{})
-	}
+	db.AutoMigrate(&Role{}, &Person{}, &Room{}, &Course{}, &Lession{}, &Person{}, &Class{}, &Registration{}, &Slot{})
 }

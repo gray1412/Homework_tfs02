@@ -20,6 +20,7 @@ require (
 	github.com/jinzhu/gorm v1.9.16
 	github.com/joho/godotenv v1.3.0
 	github.com/kennygrant/sanitize v1.2.4 // indirect
+	github.com/olivere/elastic/v7 v7.0.25
 	github.com/rs/cors v1.7.0
 	github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca // indirect
 	github.com/stretchr/testify v1.7.0 // indirect

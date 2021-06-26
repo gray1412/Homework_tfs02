@@ -80,7 +80,7 @@ func (server *Server) UpdateUser(w http.ResponseWriter, r *http.Request) {
 
 	vars := mux.Vars(r)
 
-	// Check if the post id is valid
+	// Check if the user id is valid
 	uid, err := strconv.ParseUint(vars["id"], 10, 32)
 	if err != nil {
 		utils.ERROR(w, http.StatusBadRequest, err)

@@ -1,44 +1,71 @@
 package storage
 
+import (
+	"gorm.io/gorm"
+)
+
+type Role struct {
+	gorm.Model
+	Role        string   `json:"role"`
+	Description string   `json:"description"`
+	Person      []Person `gorm:"foreignKey:RoleID;associationForeignKey:ID"`
+}
+
 type Person struct {
-	ID     uint   `gorm:"primaryKey"`
-	Name   string `json: "name"`
-	Age    int    `json: "age"`
-	TypeID uint
+	gorm.Model
+	FirstName    string         `json:"firstName"`
+	LastName     string         `json:"lastName"`
+	Address      string         `json:"address"`
+	Email        string         `json:"email"`
+	Phone        int            `json:"phone"`
+	Age          int            `json:"age"`
+	RoleID       int            `json:"role"`
+	Registration []Registration `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }
-type Type struct {
-	ID          uint     `gorm:"primaryKey"`
-	Type        string   `json: "type"`
-	Email       string   `json: "email"`
-	Description string   `json: "description"`
-	Person      []Person `gorm:"foreignKey:TypeID;associationForeignKey:ID"`
+
+type Course struct {
+	gorm.Model
+	Name        string  `json:"name"`
+	Description string  `json:"description"`
+	Class       []Class `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }
-type Registration struct {
-	ID       uint     `gorm:"primaryKey"`
-	PersonID []Person `gorm:"foreignKey:PersonID;associationForeignKey:ID"`
-}
+
 type Class struct {
-	ID       uint     `gorm:"primaryKey"`
-	Name     string   `json: "name"`
-	LessonID []Lesson `gorm:"foreignKey:LessonID;associationForeignKey:ID"`
+	gorm.Model
+	Name         string `json:"name"`
+	Description  string `json:"description"`
+	CourseID     uint
+	Registration []Registration `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+	Slot         []Slot         `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }
-type Lesson struct {
-	ID        uint      `gorm:"primaryKey"`
-	Name      string    `json: "name"`
-	StartTime string    `json: "starttime"`
-	EndTime   string    `json: "endtime"`
-	SubjectID []Subject `gorm:"foreignKey:SubjectID;associationForeignKey:ID"`
-	RoomID    []Room    `gorm:"foreignKey:RoomID;associationForeignKey:ID"`
-	PersonID  []Person  `gorm:"foreignKey:PersonID;associationForeignKey:ID"`
+
+type Registration struct {
+	gorm.Model
+	PersonID uint
+	ClassID  uint
 }
-type Subject struct {
-	ID          uint   `gorm:"primaryKey"`
-	Name        string `json: "name"`
-	Description string `json: "description"`
+
+type Lession struct {
+	gorm.Model
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	CourseID    uint
+	Slot        []Slot `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
 }
+
 type Room struct {
-	ID          uint   `gorm:"primaryKey"`
-	Name        string `json: "name"`
-	PlaceID     string `json: "place"`
-	Description string `json: "description"`
+	gorm.Model
+	Floor    int `json:"floor"`
+	CourseID uint
+	Slot     []Slot `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+}
+
+type Slot struct {
+	gorm.Model
+	Name      string `json:"name"`
+	StartTime string `json:"startTime"`
+	EndTime   string `json:"endTime"`
+	ClassID   uint
+	LessionID uint
+	RoomID    uint
 }

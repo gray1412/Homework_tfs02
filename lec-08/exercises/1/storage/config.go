@@ -2,7 +2,6 @@ package storage
 
 import (
 	"fmt"
-	"log"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -18,13 +17,4 @@ func ConnectToDatabase() (db *gorm.DB) {
 		fmt.Println("Connect Successful!")
 	}
 	return
-}
-
-//tao bang
-func CreateTable() {
-	db := *ConnectToDatabase()
-	err := db.AutoMigrate(&Person{}, &Type{}, &Registration{}, &Class{}, &Lesson{}, &Subject{}, &Room{})
-	if err != nil {
-		log.Fatal("error when auto migrate table ", err)
-	}
 }

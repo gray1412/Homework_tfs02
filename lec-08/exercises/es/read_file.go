@@ -10,7 +10,6 @@ import (
 	doc "tfs-02/lec-08/exercises/es/document"
 
 	elastic "github.com/olivere/elastic/v7"
-	uuid "github.com/satori/go.uuid"
 )
 
 const (
@@ -33,7 +32,7 @@ func readFile(esclient *doc.ESClient) {
 	bulkRequest := esclient.Bulk()
 	for n, col := range rows {
 		n++
-		id := uuid.NewV4().String()
+		// id := uuid.NewV4().String()
 		if n <= TOTAL_ROWS {
 			document := doc.Document{
 				ID:    strconv.Itoa(n),
@@ -41,7 +40,7 @@ func readFile(esclient *doc.ESClient) {
 				Title: col[1],
 				Body:  col[2],
 			}
-			req := elastic.NewBulkIndexRequest().Index("documents").Type("").Id(id).Doc(document)
+			req := elastic.NewBulkIndexRequest().Index("documents").Type("_doc").Id(document.ID).Doc(document)
 			bulkRequest = bulkRequest.Add(req)
 			if n%100 == 0 {
 				fmt.Printf("%v:\n", n)

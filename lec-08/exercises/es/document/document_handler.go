@@ -27,7 +27,8 @@ func NewBookManager(es *ESClient) *BookManager {
 	return &BookManager{esClient: es}
 }
 
-func (bm *BookManager) SearchBooks(title string) []*Document {
+func SearchBooks(title string) []*Document {
+	var bm *BookManager
 	ctx := context.Background()
 
 	if bm.esClient == nil {
@@ -65,7 +66,8 @@ func (bm *BookManager) SearchBooks(title string) []*Document {
 	return books
 }
 
-func (bm *BookManager) AddBook(book *Document) error {
+func AddBook(book *Document) error {
+	var bm *BookManager
 	ctx := context.Background()
 	if bm.esClient == nil {
 		fmt.Println("Nil es client")
@@ -90,7 +92,8 @@ func (bm *BookManager) AddBook(book *Document) error {
 	return err
 }
 
-func (bm *BookManager) DeleteBook(book *Document) error {
+func DeleteBook(book *Document) error {
+	var bm *BookManager
 	ctx := context.Background()
 	if bm.esClient == nil {
 		fmt.Println("Nil es client")
@@ -108,8 +111,8 @@ func (bm *BookManager) DeleteBook(book *Document) error {
 	return err
 }
 
-
 var letterRunes = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+
 func rndStringRunes(n int) string {
 	b := make([]rune, n)
 	for i := range b {

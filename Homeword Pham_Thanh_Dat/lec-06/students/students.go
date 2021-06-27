@@ -4,11 +4,18 @@ import (
 	Api "Api/Storage"
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
-	"github.com/rs/cors"
+	"os"
+
 	"github.com/gorilla/mux"
-	"io/ioutil"
+	"github.com/rs/cors"
 )
+
+type DataFile struct {
+	Name string
+	File string
+}
 
 func PathStudent() {
 	r := mux.NewRouter().StrictSlash(true)
@@ -27,50 +34,33 @@ func PathStudent() {
 	delete.Use(contentTypeJson)
 	http.Handle("/", r)
 	handler := cors.New(cors.Options{
-        AllowedMethods: []string{"GET", "POST", "DELETE", "PATCH", "OPTIONS","PUT"},
-    }).Handler(r)
-    // log.Fatal(http.ListenAndServe(":8082", handler))
+		AllowedMethods: []string{"GET", "POST", "DELETE", "PATCH", "OPTIONS", "PUT"},
+	}).Handler(r)
+	// log.Fatal(http.ListenAndServe(":8082", handler))
 	http.ListenAndServe(":8000", handler)
 }
 
 func uploadFile(w http.ResponseWriter, r *http.Request) {
-    fmt.Println("File Upload Endpoint Hit")
-
-    // Parse our multipart form, 10 << 20 specifies a maximum
-    // upload of 10 MB files.
-    r.ParseMultipartForm(10 << 20)
-    // FormFile returns the first file for the given key `myFile`
-    // it also returns the FileHeader so we can get the Filename,
-    // the Header and the size of the file
-    file, handler, err := r.FormFile("myFile")
-    if err != nil {
-        fmt.Println("Error Retrieving the File")
-        fmt.Println(err)
-        return
-    }
-    defer file.Close()
-    fmt.Printf("Uploaded File: %+v\n", handler.Filename)
-    fmt.Printf("File Size: %+v\n", handler.Size)
-    fmt.Printf("MIME Header: %+v\n", handler.Header)
-
-    // Create a temporary file within our temp-images directory that follows
-    // a particular naming pattern
-    tempFile, err := ioutil.TempFile("temp-images", "upload-*.png")
-    if err != nil {
-        fmt.Println(err)
-    }
-    defer tempFile.Close()
-
-    // read all of the contents of our uploaded file into a
-    // byte array
-    fileBytes, err := ioutil.ReadAll(file)
-    if err != nil {
-        fmt.Println(err)
-    }
-    // write this byte array to our temporary file
-    tempFile.Write(fileBytes)
-    // return that we have successfully uploaded our file!
-    fmt.Fprintf(w, "Successfully Uploaded File\n")
+	// db := *Api.Connect()
+	// defer db.Close()
+	// if (!db.HasTable(&memory.Data{})) {
+	// 	db.CreateTable(&memory.Data{})
+	// }
+	var dataFile DataFile
+	err := json.NewDecoder(r.Body).Decode(&dataFile)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+	}
+	f, err := os.Create(dataFile.Name)
+	if err != nil {
+		fmt.Print("Aaaaaaaa")
+		log.Fatal(err)
+	}
+	defer f.Close()
+	_, err2 := f.WriteString(dataFile.File)
+	if err2 != nil {
+		log.Fatal(err2)
+	}
 }
 func viewStudent(w http.ResponseWriter, r *http.Request) {
 	db := *Api.Connect()

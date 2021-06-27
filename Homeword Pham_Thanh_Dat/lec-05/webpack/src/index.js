@@ -5,7 +5,7 @@ import { addStudent } from "./action/add";
 import { updateStudent } from "./action/update";
 const btn = document.getElementById("btnRequest");
 // const result = document.getElementById("result");
-// const Json = createHttpJson();
+const Json = createHttpJson();
 // const text = createHttpText();
 if (btn) {
   btn.addEventListener("click", () => {
@@ -44,23 +44,26 @@ if (Update) {
   });
 }
 
-// const formData = new FormData();
-// const fileField = document.querySelector('input[type="file"]');
-// formData.append('avatar', fileField.files[0]);
-// const upload = document.getElementById("upload");
-// if (upload) {
-//   upload.addEventListener("click", () => {
-//     const selectedFile = document.getElementById('file').files[0];
-//     const file = { File: selectedFile};
-//     text.post("http://localhost:8000/upload", {
-//       headers: {'Content-Type': 'multipart/form-data'},
-//       body: formData
-//     })
-//       .then((data) => {
-//         result.innerHTML = JSON.stringify(data);
-//       })
-//       .catch((e) => {
-//         result.innerHTML = e;
-//       });
-//   });
-// }
+
+const upload = document.getElementById("upload");
+// document.getElementById('uploadfile')
+upload.addEventListener('click', function() {
+  const files = document.getElementById('file')
+  const namefile = files.files[0].name
+  var fr = new FileReader();
+  let Files = {}
+  fr.onload = function() {
+    Files = {
+      Name: namefile,
+      File: fr.result
+    }
+    Json.post('http://localhost:8000/upload', {
+      body: JSON.stringify(Files)
+    }).then((data) => {
+      alert("Create sucess full")
+    }).catch((e) => {
+      console.log(JSON.stringify(e));
+    })
+  }
+  fr.readAsText(files.files[0]);
+})

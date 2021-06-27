@@ -1,4 +1,4 @@
-package book
+package document
 
 import (
 	"errors"

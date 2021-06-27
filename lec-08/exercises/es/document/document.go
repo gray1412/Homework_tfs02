@@ -1,19 +1,19 @@
-package book
+package document
 
 import (
 	"encoding/json"
 	"fmt"
 )
 
-// Book defines a book's attributes and basic operation and interaction with Elasticsearch
-type Book struct {
-	ID    string `json:"id,omitempty"`
+type Document struct {
+	ID    string `json:"id"`
+	Rate  string `json:"rate"`
 	Title string `json:"title"`
 	Body  string `json:"body"`
 }
 
 // String returns object's string representation
-func (book *Book) String() string {
+func (book *Document) String() string {
 	if book == nil {
 		return ""
 	}

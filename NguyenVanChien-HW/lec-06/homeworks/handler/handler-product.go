@@ -59,6 +59,8 @@ func CreateProduct(w http.ResponseWriter, r *http.Request) {
 
 func ReadProduc(w http.ResponseWriter, r *http.Request) {
 	//connect database
+	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	db := *storage.ConnectDatabase()
 	defer db.Close()
 

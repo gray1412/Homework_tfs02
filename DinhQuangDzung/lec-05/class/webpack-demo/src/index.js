@@ -14,6 +14,7 @@ get.onsubmit = (e) => {
 			headers: {
 				"Content-Type": "application/json",
 			},
+			responseType: "json",
 		})
 		.then((data) => {
 			console.log(data);
@@ -55,8 +56,9 @@ form.onsubmit = (e) => {
 				userId: 1,
 			}),
 			headers: {
-				"Content-type": "application/json; charset=UTF-8",
+				"Content-type": "application/json",
 			},
+			responseType: "json",
 		})
 		.then((data) => {
 			console.log(data);

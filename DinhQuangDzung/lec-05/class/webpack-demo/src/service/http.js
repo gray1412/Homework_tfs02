@@ -1,25 +1,55 @@
 const METHODS = {
 	Get: "GET",
 	Post: "POST",
-	Put: "PUT",
-	Delete: "DELETE",
+};
+
+// Override window.fetch() function to define a request interceptor
+fetch = ((originalFetch) => {
+	return (...args) => {
+		const customHeader = { "Say-Hello": "Hello World!" };
+
+		console.log("Adding custom header...", customHeader);
+
+		Object.assign(args[1].headers, customHeader);
+
+		console.log("Request sent...");
+		return originalFetch.apply(this, args);
+	};
+})(fetch);
+
+const parseResponse = (response, options = {}) => {
+	return new Promise((resolve, reject) => {
+		if (response.ok) {
+			switch (options.responseType) {
+				case "json":
+					response.json().then((data) => {
+						resolve(data);
+					});
+					break;
+				case "blob":
+					resolve.blob().then((data) => {
+						resolve(data);
+					});
+					break;
+				default:
+					response.text().then((data) => {
+						resolve(data);
+					});
+			}
+			return;
+		}
+
+		reject(response.statusText);
+	});
 };
 
 // Create an http instance
 const createHttp = () => {
 	const http = {
 		request(url, options = {}) {
-			return new Promise((resolve, reject) => {
-				fetch(url, options)
-					.then((response) => {
-						if (response.ok) {
-							response.json().then((data) => {
-								resolve(data);
-							});
-						}
-					})
-					.catch((e) => reject(e));
-			});
+			return fetch(url, options)
+				.then((response) => parseResponse(response, options))
+				.catch((e) => Promise.reject(e));
 		},
 
 		get(url, options = {}) {

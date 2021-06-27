@@ -5,15 +5,15 @@ import (
 	"fmt"
 )
 
-type Document struct {
-	ID    string `json:"id"`
+type Book struct {
+	ID    string `json:"id,omitempty"`
 	Rate  string `json:"rate"`
 	Title string `json:"title"`
 	Body  string `json:"body"`
 }
 
 // String returns object's string representation
-func (book *Document) String() string {
+func (book *Book) String() string {
 	if book == nil {
 		return ""
 	}

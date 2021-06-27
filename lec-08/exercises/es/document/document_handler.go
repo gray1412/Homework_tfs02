@@ -27,8 +27,7 @@ func NewBookManager(es *ESClient) *BookManager {
 	return &BookManager{esClient: es}
 }
 
-func SearchBooks(title string) []*Document {
-	var bm *BookManager
+func (bm *BookManager) SearchBooks(title string) []*Book {
 	ctx := context.Background()
 
 	if bm.esClient == nil {
@@ -52,9 +51,10 @@ func SearchBooks(title string) []*Document {
 		return nil
 	}
 	// get result
-	var books []*Document
+	var books []*Book
+
 	for _, hit := range searchResult.Hits.Hits {
-		var book Document
+		var book Book
 		err := json.Unmarshal(hit.Source, &book)
 		if err != nil {
 			fmt.Println("Get data error: ", err)
@@ -63,11 +63,11 @@ func SearchBooks(title string) []*Document {
 		fmt.Println(&book)
 		books = append(books, &book)
 	}
+
 	return books
 }
 
-func AddBook(book *Document) error {
-	var bm *BookManager
+func (bm *BookManager) AddBook(book *Book) error {
 	ctx := context.Background()
 	if bm.esClient == nil {
 		fmt.Println("Nil es client")
@@ -92,8 +92,7 @@ func AddBook(book *Document) error {
 	return err
 }
 
-func DeleteBook(book *Document) error {
-	var bm *BookManager
+func (bm *BookManager) DeleteBook(book *Book) error {
 	ctx := context.Background()
 	if bm.esClient == nil {
 		fmt.Println("Nil es client")

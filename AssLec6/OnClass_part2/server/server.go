@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
+	"github.com/rs/cors"
 )
 
 func RunServer() {
@@ -25,6 +26,11 @@ func RunServer() {
 	router.Methods(http.MethodPost).Path("/students").HandlerFunc(handlers.Create)
 	router.Methods(http.MethodPut).Path("/students").HandlerFunc(handlers.Update)
 	router.Methods(http.MethodDelete).Path("/students/{id:[0-9]+}").HandlerFunc(handlers.Delete)
+
+	handler := cors.New(cors.Options{
+		AllowedMethods: []string{"GET", "POST", "DELETE", "PATCH", "OPTIONS", "PUT"},
+	}).Handler(router)
+	http.ListenAndServe(":8080", handler)
 
 	err := http.ListenAndServe(":8080", router)
 	if err != nil {

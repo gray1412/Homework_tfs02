@@ -13,6 +13,7 @@ func Create(w http.ResponseWriter, r *http.Request) {
 	err := json.NewDecoder(r.Body).Decode(&newStudent)
 	if err != nil {
 		responseWithJson(w, http.StatusBadRequest, map[string]string{"message": "Invalid body"})
+		// responseWithJson(w, http.StatusOK, map[string]string{"message": "Invalid body"})
 		return
 	}
 

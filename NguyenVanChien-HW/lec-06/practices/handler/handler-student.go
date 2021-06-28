@@ -44,12 +44,15 @@ func GetStudentByName(w http.ResponseWriter, r *http.Request) {
 	for _, student := range storage.Students {
 		if student.Name == name {
 			fmt.Fprintf(w, "Student %v has name is: %v and age is %v", student.Id, student.Name, student.Age)
+			// fmt.Fprint(w, student)
 			json.NewDecoder(r.Body).Decode(&student)
+
 		}
 		return
 	}
 	// notify if don't have student
 	fmt.Fprintf(w, "Can't find student has name %v", name)
+
 }
 
 func CreateStudent(w http.ResponseWriter, r *http.Request) {

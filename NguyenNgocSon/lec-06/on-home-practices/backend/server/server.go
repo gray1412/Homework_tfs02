@@ -24,7 +24,7 @@ func RunServer() {
 	router.Methods("DELETE").Path("/api/members/{id:(?:\\d+)}/delete").HandlerFunc(handler.DeleteMember)
 
 	handler := cors.New(cors.Options{
-		AllowedMethods: []string{"GET", "POST", "DELETE", "PATCH", "OPTIONS"},
+		AllowedMethods: []string{"GET", "POST", "DELETE", "PATCH", "OPTIONS", "PUT"},
 	}).Handler(router)
 
 	http.ListenAndServe(":8000", handler)

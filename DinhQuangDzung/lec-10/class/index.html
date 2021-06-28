@@ -1,0 +1,38 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vue Demo</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>Title: {{product.title}}</h1>
+			<h1>Price: {{product.price}}</h1>
+			<div v-html="product.desc"></div>
+			<div v-if="product.quantity > 0">
+				<h2 v-if="product.quantity < 5">Sold out soon</h2>
+				<button>Add to cart</button>
+			</div>
+			<h2 v-else>Out of stock</h2>
+			<h2 v-show="product.sale > 0">SALE {{product.sale}}%</h2>
+			<div>
+				Tags:
+				<span v-for="tag in product.tags"> {{tag}} </span>
+			</div>
+			<div>
+				Options:
+				<span v-for="(option, key) in product.options">
+					{{key}}: {{option}}
+				</span>
+			</div>
+			<div>
+				Qty: {{cart.quantity}}
+				<button v-on:click="plus">+</button>
+				<button v-on:click="minus">-</button>
+			</div>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>

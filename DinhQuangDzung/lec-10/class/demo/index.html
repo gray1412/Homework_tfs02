@@ -1,0 +1,60 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cart Demo</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div id="app">
+			<div class="main">
+				<div class="product">
+					<div
+						v-for="(product, index) in products"
+						v-bind:id="index"
+						class="box"
+					>
+						<img v-bind:src="product.img" />
+						<i v-on:click="add" class="fa fa-plus"></i>
+						<h2>{{product.title}}</h2>
+						<p>${{product.price}}</p>
+					</div>
+				</div>
+				<div class="cart">
+					<div class="head">
+						<h3>Shopping Cart</h3>
+						<div class="price">Price</div>
+						<div class="quantity">Quantity</div>
+						<div class="total">Total</div>
+					</div>
+
+					<div
+						v-for="(item, index) in cart.items"
+						v-bind:index="index"
+						class="row"
+					>
+						<img :src="item.img" />
+						<h4>{{item.title}}</h4>
+						<p>${{item.price}}</p>
+						<div v-on:click="minus" class="qty-minus">-</div>
+						<div class="qty">{{item.quantity}}</div>
+						<div v-on:click="plus" class="qty-plus">+</div>
+						<div v-on:click="remove" class="del">Remove</div>
+						<div class="total-price">{{item.total}}</div>
+					</div>
+					<h5>Subtotal amount: ${{cart.subTotal}}</h5>
+				</div>
+			</div>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>

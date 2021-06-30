@@ -13,6 +13,7 @@ import (
 
 const (
 	indexName = "documents"
+	indexType = "doc"
 )
 
 func init() {
@@ -60,7 +61,7 @@ func (bm *BookManager) SearchBooks(title string) []*Book {
 			fmt.Println("Get data error: ", err)
 			continue
 		}
-		fmt.Println(&book)
+		// fmt.Println(&book)
 		books = append(books, &book)
 	}
 

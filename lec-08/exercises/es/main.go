@@ -4,40 +4,46 @@ import (
 	"context"
 	"encoding/csv"
 	"fmt"
+	"log"
 	"os"
+	"regexp"
+	"runtime"
 	"strconv"
 	doc "tfs-02/lec-08/exercises/es/document"
+	"time"
 
 	elastic "github.com/olivere/elastic/v7"
 )
 
 func main() {
+	//time to run func
+	defer TimeTrack(time.Now())
 	url := "http://localhost:9200"
 	esclient, _ := doc.NewESClient(url)
-	readFile(esclient)
+	// ReadFile(esclient)
 
 	// search
 	bm := doc.NewBookManager(esclient)
 	// case 1: found
-	resultSearchBooksSuccess := bm.SearchBooks("Stuning even for the non-gamer")
-	fmt.Println("Found books: ", resultSearchBooksSuccess)
-	// case 2: not found
-	resultSearchBooksFailed := bm.SearchBooks("The best soundtrack")
-	fmt.Println("Found books: ", resultSearchBooksFailed)
-	// delete
-	bm.DeleteBook(&doc.Book{ID: "1"})
-	// search again, but not found
-	resultSearchBooksSuccess = bm.SearchBooks("Stuning even for the non-gamer")
-	fmt.Println("Found books: ", resultSearchBooksSuccess)
+	bm.SearchBooks("beautiful")
+	// fmt.Println("Found books: ", resultSearchBooksSuccess)
+	// // case 2: not found
+	// resultSearchBooksFailed := bm.SearchBooks("8")
+	// fmt.Println("Found books: ", resultSearchBooksFailed)
+	// // delete
+	// bm.DeleteBook(&doc.Book{ID: "5"})
+	// // search again, but not found
+	// resultSearchBooksSuccess = bm.SearchBooks("5")
+	// fmt.Println("Found books: ", resultSearchBooksSuccess)
 
 }
 
 const (
 	FILE       = "../train.csv"
-	TOTAL_ROWS = 50000
+	TOTAL_ROWS = 116100
 )
 
-func readFile(esclient *doc.ESClient) {
+func ReadFile(esclient *doc.ESClient) {
 	ctx := context.Background()
 	file, err := os.Open(FILE)
 	printError(err)
@@ -60,7 +66,7 @@ func readFile(esclient *doc.ESClient) {
 				Title: col[1],
 				Body:  col[2],
 			}
-			req := elastic.NewBulkIndexRequest().Index("documents").Type("_doc").Id(document.ID).Doc(document)
+			req := elastic.NewBulkIndexRequest().Index("documents").Type("doc").Id(document.ID).Doc(document)
 			bulkRequest = bulkRequest.Add(req)
 			if n%10000 == 0 {
 				fmt.Printf("%v:\n", n)
@@ -82,4 +88,20 @@ func printError(err error) {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 		os.Exit(1)
 	}
+}
+
+func TimeTrack(start time.Time) {
+	elapsed := time.Since(start)
+
+	// Skip this function, and fetch the PC and file for its parent.
+	pc, _, _, _ := runtime.Caller(1)
+
+	// Retrieve a function object this functions parent.
+	funcObj := runtime.FuncForPC(pc)
+
+	// Regex to extract just the function name (and not the module path).
+	runtimeFunc := regexp.MustCompile(`^.*\.(.*)$`)
+	name := runtimeFunc.ReplaceAllString(funcObj.Name(), "$1")
+
+	log.Println(fmt.Sprintf("%s took %s", name, elapsed))
 }

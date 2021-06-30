@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="app">
+		<div class="main">
+			<div class="product">
+				<div class="box" v-for="i in product">
+					<img v-bind:src="i.url" />
+					<i class="fa fa-plus" v-on:click="addToCart(i.id,i.name, i.price, i.url)"></i>
+					<h2>{{i.name}}</h2>
+					<p>${{i.price}}</p>
+				</div>
+			</div>
+			<div class="cart">
+				<div class="head">
+					<h3>Shopping Cart</h3>
+					<div class="price">Price</div>
+					<div class="quantity">Quantity</div>
+					<div class="total">Total</div>
+				</div>
+
+				<div class="row" v-for="i, key in cart">
+					<img v-bind:src="i.url" />
+					<h4>{{i.name}}</h4>
+					<p>${{i.price}}</p>
+					<div class="qty-minus" v-on:click="minus(i.id)">-</div>
+					<div class="qty">{{i.quantity}}</div>
+					<div class="qty-plus" v-on:click="plus(i.id)">+</div>
+					<div class="del" v-on:click="remove(i.id)">Remove</div>
+					<div class="total-price">$35</div>
+				</div>
+				<h5>Subtotal amount: ${{totalPrice}}</h5>
+			</div>
+		</div>
+	</div>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			computed:{
+				totalPrice(){
+					let total = 0;
+					this.cart.forEach((item) => {
+						total += (item.price * item.quantity)
+					})
+					return total
+				}
+			},
+			data: {
+				product: 
+				[
+				{
+					id:1,
+					name:"Beer Bottle",
+					price:25,
+					url:"https://chenyiya.com/codepen/product-1.jpg",
+				},
+				{
+					id:2,
+					name:"Eco Bag",
+					price:"75",
+					url:"https://chenyiya.com/codepen/product-2.jpg",
+				},
+				{
+					id:3,
+					name:"Paper Bag",
+					price:"35",
+					url:"https://chenyiya.com/codepen/product-3.jpg",
+				}
+				],
+				cart:[],
+			},
+			methods:{
+				addToCart(id, name, price, url){
+					this.cart.push({
+						id:id,
+						name:name,
+						price:price,
+						url:url,
+						quantity: 1
+					})
+				}, 
+				minus(id){
+					for(let i = 0; i < this.cart.length; i++){
+						if(this.cart[i].id == id){
+							if(this.cart[i].quantity > 1){
+								this.cart[i].quantity--;
+							}
+							if(this.cart[i].quantity == 1)
+							{
+								this.cart.splice(i,1);
+							}
+						}
+					}
+				},
+				plus(id){
+					for(let i = 0; i < this.cart.length; i++){
+						if(this.cart[i].id == id){
+							this.cart[i].quantity++;
+						}
+					}
+				},
+				remove(id){
+					for (let i = 0; i < this.cart.length; i++) {
+						if (this.cart[i].id == id) {
+							this.cart.splice(i,1);
+						}
+					}
+				}
+			},
+		})
+	</script>
+
+</body>
+</html>

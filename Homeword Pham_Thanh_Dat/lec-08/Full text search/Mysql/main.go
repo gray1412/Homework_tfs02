@@ -1,11 +1,13 @@
 package main
 
 import (
-	datautil "amazon/data"
-	storage "amazon/storage"
+	// data "amazon/data"
+	router "amazon/router"
+	// storage "amazon/storage"
 )
 
 func main() {
-	storage.Migrate()
-	datautil.ReadData()
+	// storage.Migrate()
+	// data.ReadData()
+	router.Search()
 }

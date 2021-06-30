@@ -41,11 +41,6 @@ func PathStudent() {
 }
 
 func uploadFile(w http.ResponseWriter, r *http.Request) {
-	// db := *Api.Connect()
-	// defer db.Close()
-	// if (!db.HasTable(&memory.Data{})) {
-	// 	db.CreateTable(&memory.Data{})
-	// }
 	var dataFile DataFile
 	err := json.NewDecoder(r.Body).Decode(&dataFile)
 	if err != nil {

@@ -63,6 +63,7 @@ func viewStudent(w http.ResponseWriter, r *http.Request) {
 	db.Find(&student)
 	b, _ := json.Marshal(student)
 	fmt.Fprint(w, string(b))
+
 }
 func addStudent(w http.ResponseWriter, r *http.Request) {
 	var s Api.Students

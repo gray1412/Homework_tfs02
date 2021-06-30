@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <table class="table table-bordered">
+        <tbody id="myTable">
+        </tbody>
+    </table>
+    <button id="btnRequest">request</button>
+    <br><br><br>
+    <label for="name">Name: </label>
+    <input type="text" id="name">
+    <br><br>
+    <label for="age">Age: </label>
+    <input type="number" id="age">
+    <br><br>
+    <button id="btnCreate">create</button>
+
+    <form name="uploadForm">
+        <div>
+            <input id="uploadInput" type="file" name="myFiles" multiple>
+            selected files: <span id="fileNum">0</span>;
+            total size: <span id="fileSize">0</span>
+        </div>
+        <div><input type="submit" value="Send file"></div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+    "name": "modules-es6",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "babel src -d lib"
+    },
+    "dependencies": {
+        "webpack": "^5.39.1"
+    }
+}

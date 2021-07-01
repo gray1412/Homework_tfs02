@@ -1,14 +1,17 @@
 package database
 
 import (
-	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
 )
 
-func ConnectToDatabase() (db *gorm.DB) {
-	db, err := gorm.Open("mysql", "root:ngochd246@/tfs02?charset=utf8&parseTime=True&loc=Local")
+func ConnectToDatabase() *gorm.DB {
+	dsn := "root:ngochd246@/tfs02?charset=utf8&parseTime=True&loc=Local"
+
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+
 	if err != nil {
-		panic("failed to connect database") // Kiểm tra kết nối tới databse
+		panic("Connected fail")
 	}
-	return
+	return db
 }

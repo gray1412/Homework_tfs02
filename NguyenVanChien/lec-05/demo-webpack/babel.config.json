@@ -1,0 +1,11 @@
+{
+    "presets": [
+        [
+            "@babel/present-env",
+            {
+                "targets": ">0.25%"
+            }
+
+        ]
+    ]
+}

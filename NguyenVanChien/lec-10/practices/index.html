@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Practice</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="main">
+            <div class="product">
+                <div class="box" v-for="item in products" v-bind:key="item.id">
+                    <img v-bind:src="item.src" />
+                    <i class="fa fa-flus" v-on:click="addItem(item)">+</i>
+                    <h2>{{ item.name }}</h2>
+                    <p>$ {{ item.price }}</p>
+                </div>
+            </div>
+
+            <div class="cart">
+                <div class="head">
+                    <h3>Shopping cart</h3>
+                    <div class="price">Price</div>
+                    <div class="quantity">Quantity</div>
+                    <div class="total">Total</div>
+                </div>
+                <div class="row" v-for="item in itemAdded" v-bind:key="item.name">
+                    <img v-bind:src="item.src" />
+                    <h4>{{ item.name }}</h4>
+                    <p>{{ item.price }}</p>
+                    <div class="qty-minus" v-on:click="minus(item)">-</div>
+                    <div class="qty">{{ item.quantity }}</div>
+                    <div class="qty-plus" v-on:click="plus(item)">+</div>
+                    <div class="del" v-on:click="del(item)">Remove</div>
+                    <div class="total-price">$ {{ item.total }}</div>
+                </div>
+                <h5>Subtotal amount: $ {{ subTotal }}</h5>
+            </div>
+        </div>
+    </div>
+    <!-- <template id="product">
+
+    </template> -->
+
+</body>
+<script>
+    Vue.component('product', {
+        
+        props: {
+            product: {
+                type: Object,
+                default: () => { }
+            },
+            addToCart: {
+                type: Function,
+            }
+        },
+        methods: {
+            addCart(item) {
+                this.$emit('add', item)
+            },
+        },
+        template: '<div class="box>\n' +
+            '   <img: src="product.src" :alt="prodcut.name"/>\n' +
+            '   <i class="fa fa-flus" @click="addToCart(product)">+</i>\n' +
+            '   <h2>{{ product.name }}</h2>\n' +
+            '   <p>${{ product.price }}</p>\n' +
+            '   </div>',
+    })
+    var vm = new Vue({
+        el: '#app',
+        computed: {
+            subTotal() {
+                let total = 0;
+                this.itemAdded.forEach((item) => {
+                    total += (item.price * item.quantity);
+                })
+
+                return total;
+            }
+        },
+        data: {
+            products: [
+                {
+                    id: 0,
+                    name: "Beer Bottle",
+                    price: 25,
+                    src: "https://chenyiya.com/codepen/product-1.jpg",
+                },
+                {
+                    id: 1,
+                    name: "Eco Bag",
+                    price: 73,
+                    src: "https://chenyiya.com/codepen/product-2.jpg",
+                },
+                {
+                    id: 2,
+                    name: "Paper Bag",
+                    price: 35,
+                    src: "https://chenyiya.com/codepen/product-3.jpg",
+                },
+            ],
+            itemAdded: [],
+            totalPrice: 0,
+        },
+
+
+        methods: {
+            addItem(item) {
+                const index = this.itemAdded.findIndex(({ id }) => item.id === id)
+                if (index === -1) {
+                    this.itemAdded.push(Object.assign({}, item, { quantity: 1, total: item.price }))
+                } else {
+                    this.itemAdded[index].quantity++;
+                    this.itemAdded[index].total = this.itemAdded[index].price * this.itemAdded[index].quantity
+                }
+            },
+            minus(item) {
+                const index = this.itemAdded.findIndex(({ id }) => item.id === id)
+                if (index != -1) {
+                    if (this.itemAdded[index].quantity > 0) {
+                        this.itemAdded[index].quantity--
+                        this.itemAdded[index].total = this.itemAdded[index].price * this.itemAdded[index].quantity
+                    }
+                }
+            },
+            plus(item) {
+                const index = this.itemAdded.findIndex(({ id }) => item.id === id)
+                if (index != -1) {
+                    if (this.itemAdded[index].quantity > 0) {
+                        this.itemAdded[index].quantity++
+                        this.itemAdded[index].total = this.itemAdded[index].price * this.itemAdded[index].quantity
+                    }
+                }
+            },
+            del(item) {
+                const index = this.itemAdded.findIndex(({ id }) => item.id === id)
+                if (index != -1) {
+                    this.itemAdded.splice(index, 1);
+                }
+            },
+        },
+    })
+
+</script>
+
+</html>

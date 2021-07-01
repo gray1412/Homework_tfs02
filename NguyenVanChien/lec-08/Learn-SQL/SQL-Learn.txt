@@ -1,0 +1,50 @@
+--Exercise 2
+1) SELECT * FROM movies WHERE id = 6
+2) SELECT * FROM movies WHERE movies.Year BETWEEN 2000 AND 2010
+3) SELECT * FROM movies WHERE movies.Year NOT BETWEEN 2000 AND 2010
+4) SELECT id, title, year FROM movies WHERE id <= 5
+
+--Exercise 3
+1) SELECT * FROM movies WHERE title LIKE "%Toy Story%"
+2) SELECT * FROM movies WHERE director = "John Lasseter"
+3) SELECT * FROM movies WHERE director != "John Lasseter"
+4) SELECT * FROM movies WHERE title LIKE "WALL%"
+
+--Exercise 4: Filtering and sorting Query results
+1) SELECT DISTINCT director FROM movies ORDER BY director ASC
+2) SELECT DISTINCT * FROM movies ORDER BY year DESC LIMIT 4
+3) SELECT DISTINCT * FROM movies ORDER BY title ASC LIMIT 5
+4) SELECT DISTINCT * FROM movies ORDER BY title ASC LIMIT 5 OFFSET 5
+
+--SQL Review: Simple SELECT Queries
+-Review 1
+1) SELECT city, population FROM north_american_cities WHERE country="Canada";
+2) SELECT city, latitude FROM north_american_cities WHERE country = "United States" ORDER BY latitude DESC;
+3) SELECT city, latitude FROM north_american_cities WHERE country = "United States" ORDER BY latitude DESC;
+4) SELECT city FROM North_american_cities WHERE country = "Mexico" ORDER BY Population DESC LIMIT 2
+5) SELECT city, population FROM North_american_cities WHERE country = "United States" ORDER BY Population DESC LIMIT 2 OFFSET 2
+
+--Exercise 6: 
+1) SELECT title, Domestic_sales, International_sales FROM Movies  INNER JOIN  Boxoffice On Movies.id = Boxoffice .Movie_id
+2) SELECT title, Domestic_sales, International_sales FROM Movies  INNER JOIN  Boxoffice On Movies.id = Boxoffice .Movie_id WHERE International_sales > Domestic_sales
+3) SELECT title, rating FROM Movies  INNER JOIN  Boxoffice On Movies.id = Boxoffice .Movie_id ORDER BY rating DESC
+
+--Exercise 7:
+1) SELECT DISTINCT Building FROM Employees 
+2) SELECT * FROM Buildings
+3) SELECT DISTINCT building_name, role FROM buildings LEFT JOIN employees ON building_name = building;
+
+--Exercise 8:
+1) SELECT * FROM employees Where building is NULL;
+2) SELECT Building_name FROM Buildings  Left Join Employees on Buildings.Building_name = Employees.Building WHere Name IS NULL
+
+--Exercise 9: Queries with expressions
+
+1) SELECT title, (Domestic_sales+International_sales)/1000000 FROM movies Inner Join Boxoffice  Where movies.id = Boxoffice.movie_id
+2) SELECT title, ((Rating)*10) as Rating_Percent FROM movies Inner Join Boxoffice  Where movies.id = Boxoffice.movie_id
+3) SELECT title, year FROM Movies WHERE year % 2 = 0
+
+--Exercise 10: Queries with aggregates 
+1) SELECT MAX(Years_employed) AS MAx_time FROM employees;
+2) SELECT role, AVG(Years_employed) as Avg FROM Employees GROUP BY role
+3)SELECT Building, Sum(Years_employed) as sum FROM Employees GROUP BY Building

@@ -1,0 +1,8 @@
+Golang Communication
+Gorilla mux: một inspector, làm router 
+StrictSlash
+
+Header: 
+
+API middleware: kết dính giữa các phần của một phần mềm, có tính ứng dụng để xử lý nội dung giữa các client, nhận input là 1 func xử lý và output cũng là 1 func xử lý.
+Parse Json Body:

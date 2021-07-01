@@ -41,6 +41,10 @@ func AddToEs() {
 			fmt.Printf("Added row %vth\n", i)
 		}
 
+		if i == 10000 {
+			break
+		}
+
 		put1, err := client.Index().
 			Index("train").
 			Id(strconv.Itoa(i)).

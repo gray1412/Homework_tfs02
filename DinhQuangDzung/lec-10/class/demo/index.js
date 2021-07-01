@@ -1,28 +1,34 @@
-const app = new Vue({
-	el: "#app",
-	data: {
-		products: [
-			{
+Vue.component("Product", {
+	data() {
+		return {
+			product: {
 				title: "Beer Bottle",
 				price: 25,
 				img: "https://chenyiya.com/codepen/product-1.jpg",
 			},
-			{
-				title: "Eco Bag",
-				price: 73,
-				img: "https://chenyiya.com/codepen/product-2.jpg",
-			},
-			{
-				title: "Paper Bag",
-				price: 35,
-				img: "https://chenyiya.com/codepen/product-3.jpg",
-			},
-		],
-		cart: {
-			items: [],
-			subTotal: 0,
+		};
+	},
+	template: `
+  <div class="box">
+		<img :src="product.img" />
+		<i @click="add" class="fa fa-plus"></i>
+		<h2>{{product.title}}</h2>
+		<p>$ {{product.price}}</p>
+	</div>`,
+});
+
+const app = new Vue({
+	el: "#app",
+	computed: {
+		subTotal() {
+			let sum = 0;
+			for (let i = 0; i < this.cart.items.length; i++) {
+				sum += this.cart.items[i].total;
+			}
+			return sum;
 		},
 	},
+	data: {},
 
 	methods: {
 		add(e) {
@@ -35,7 +41,6 @@ const app = new Vue({
 					if (item.title == this.products[index].title) {
 						item.quantity++;
 						item.total = item.price * item.quantity;
-						this.cart.subTotal = this.cal();
 						return item;
 					}
 					return item;
@@ -50,14 +55,12 @@ const app = new Vue({
 				quantity: 1,
 				total: this.products[index].price,
 			});
-			this.cart.subTotal = this.cal();
 		},
 
 		plus(e) {
 			const index = e.target.parentNode.getAttribute("index");
 			this.cart.items[index].quantity++;
 			this.cart.items[index].total += this.cart.items[index].price;
-			this.cart.subTotal = this.cal();
 		},
 		minus(e) {
 			const index = e.target.parentNode.getAttribute("index");
@@ -66,19 +69,10 @@ const app = new Vue({
 			}
 			this.cart.items[index].quantity--;
 			this.cart.items[index].total -= this.cart.items[index].price;
-			this.cart.subTotal = this.cal();
 		},
 		remove(e) {
 			const index = e.target.parentNode.getAttribute("index");
 			this.cart.items.splice(index, 1);
-			this.cart.subTotal = this.cal();
-		},
-		cal() {
-			let sum = 0;
-			for (let i = 0; i < this.cart.items.length; i++) {
-				sum += this.cart.items[i].total;
-			}
-			return sum;
 		},
 	},
 });

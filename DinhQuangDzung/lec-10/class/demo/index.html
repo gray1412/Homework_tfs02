@@ -18,16 +18,7 @@
 		<div id="app">
 			<div class="main">
 				<div class="product">
-					<div
-						v-for="(product, index) in products"
-						v-bind:id="index"
-						class="box"
-					>
-						<img v-bind:src="product.img" />
-						<i v-on:click="add" class="fa fa-plus"></i>
-						<h2>{{product.title}}</h2>
-						<p>${{product.price}}</p>
-					</div>
+					<Product v-for="item in products"></Product>
 				</div>
 				<div class="cart">
 					<div class="head">
@@ -37,21 +28,17 @@
 						<div class="total">Total</div>
 					</div>
 
-					<div
-						v-for="(item, index) in cart.items"
-						v-bind:index="index"
-						class="row"
-					>
+					<div v-for="(item, index) in cart.items" :index="index" class="row">
 						<img :src="item.img" />
 						<h4>{{item.title}}</h4>
 						<p>${{item.price}}</p>
-						<div v-on:click="minus" class="qty-minus">-</div>
+						<div @click="minus" class="qty-minus">-</div>
 						<div class="qty">{{item.quantity}}</div>
-						<div v-on:click="plus" class="qty-plus">+</div>
-						<div v-on:click="remove" class="del">Remove</div>
+						<div @click="plus" class="qty-plus">+</div>
+						<div @click="remove" class="del">Remove</div>
 						<div class="total-price">{{item.total}}</div>
 					</div>
-					<h5>Subtotal amount: ${{cart.subTotal}}</h5>
+					<h5>Subtotal amount: ${{subTotal}}</h5>
 				</div>
 			</div>
 		</div>

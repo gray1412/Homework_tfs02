@@ -31,7 +31,7 @@ func AddToEs() {
 	}
 
 	for i, line := range lines {
-		data := database.CsvLine{
+		data := database.Review{
 			Type:  line[0],
 			Title: line[1],
 			Body:  line[2],
@@ -41,12 +41,12 @@ func AddToEs() {
 			fmt.Printf("Added row %vth\n", i)
 		}
 
-		if i == 10000 {
+		if i == 100000 {
 			break
 		}
 
 		put1, err := client.Index().
-			Index("train").
+			Index("review").
 			Id(strconv.Itoa(i)).
 			BodyJson(data).
 			Do(ctx)
@@ -71,7 +71,7 @@ func QueryEs(field string, val string) {
 	}
 	termQuery := elastic.NewTermQuery(field, val)
 	searchResult, err := client.Search().
-		Index("train").   // search in index "train"
+		Index("review").  // search in index "review"
 		Query(termQuery). // specify the query
 		Do(ctx)           // execute
 	if err != nil {

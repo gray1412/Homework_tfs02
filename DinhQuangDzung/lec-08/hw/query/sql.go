@@ -10,7 +10,7 @@ import (
 )
 
 func AddToSql() {
-	s := []database.CsvLine{}
+	s := []database.Review{}
 
 	db := database.ConnectSQL()
 
@@ -19,17 +19,17 @@ func AddToSql() {
 		panic(err)
 	}
 
-	db.Debug().Migrator().DropTable(&database.CsvLine{})
-	db.AutoMigrate(&database.CsvLine{})
+	db.Debug().Migrator().DropTable(&database.Review{})
+	db.AutoMigrate(&database.Review{})
 
 	// Loop through lines & turn into object
 	for i, line := range lines {
-		data := database.CsvLine{
+		data := database.Review{
 			Type:  line[0],
 			Title: line[1],
 			Body:  line[2],
 		}
-		if i == 10000 {
+		if i == 100000 {
 			break
 		}
 		s = append(s, data)

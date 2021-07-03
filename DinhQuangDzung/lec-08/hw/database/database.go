@@ -7,7 +7,7 @@ import (
 	"gorm.io/gorm"
 )
 
-type CsvLine struct {
+type Review struct {
 	Type  string
 	Title string
 	Body  string
@@ -73,7 +73,7 @@ type Slot struct {
 }
 
 func ConnectSQL() (db *gorm.DB) {
-	dsn := "root:Polarbear1011@/mysql_db?charset=utf8&parseTime=True&loc=Local"
+	dsn := "root:admin@/es-demo?charset=utf8&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatal("error when connect to db ", err)

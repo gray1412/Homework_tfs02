@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="main">
+          <div class="product">
+            <div class="box">
+              <img src="https://chenyiya.com/codepen/product-1.jpg" />
+              <i class="fa fa-plus"></i>
+              <h2>Beer Bottle</h2>
+              <p>$25</p>
+            </div>
+            <div class="box">
+              <img src="https://chenyiya.com/codepen/product-2.jpg" />
+              <i class="fa fa-plus"></i>
+              <h2>Eco Bag</h2>
+              <p>$73</p>
+            </div>
+      
+            <div class="box">
+              <img src="https://chenyiya.com/codepen/product-3.jpg" />
+              <i class="fa fa-plus"></i>
+              <h2>Paper Bag</h2>
+              <p>$35</p>
+            </div>
+          </div>
+          <div class="cart">
+            <div class="head">
+              <h3>Shopping Cart</h3>
+              <div class="price">Price</div>
+              <div class="quantity">Quantity</div>
+              <div class="total">Total</div>
+            </div>
+      
+            <div class="row">
+              <img src="https://chenyiya.com/codepen/product-3.jpg" />
+              <h4>Paper Bag</h4>
+              <p>$35</p>
+              <div class="qty-minus">-</div>
+              <div class="qty">1</div>
+              <div class="qty-plus">+</div>
+              <div class="del">Remove</div>
+              <div class="total-price">$35</div>
+            </div>
+            <h5>Subtotal amount: $35</h5>
+          </div>
+        </div>
+      </div>
+      <script>
+         let vm = new Vue({
+             el: "#app",
+             data:{
+                items:[
+                    {
+                        id: 0,
+                        src:"https://chenyiya.com/codepen/product-1.jpg",
+                        name: "Beer Bottle",
+                        price: 25
+                        
+                    },
+                    {
+                        id: 1,
+                        src:"https://chenyiya.com/codepen/product-2.jpg",
+                        name: "Eco Bag",
+                        price: 73
+                        
+                    },
+                    {
+                        id: 2,
+                        src:"https://chenyiya.com/codepen/product-3.jpg",
+                        name: "Paper Bag",
+                        price: 35
+                        
+                    }
+                ],
+                cart:[
+                    {
+                        id: 2,
+                        src:"https://chenyiya.com/codepen/product-3.jpg",
+                        name: "Paper Bag",
+                        price: 35,
+                        quantity: 1,
+                        total: 35                        
+                    }
+                ],
+                SubtotalAmount:0
+             },
+             methods: {
+                 addToCart(id){
+                     for(let i = 0; i<this.cart.length;i++){
+                         if(id == this.cart[i].id)
+                     }
+                     this.cart.push(this.items[id])
+                 },
+                 remove(){},
+                 plus(){},
+                 minus(){},
+                 calcSubtotalAmount(){}
+                 
+             }
+         })
+      </script>
+</body>
+</html>

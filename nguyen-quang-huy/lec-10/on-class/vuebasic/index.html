@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="obj">
+        <div v-on:mousemove="toado">
+            <button v-on:click="add">Click me</button>
+            <p v-on:mouseover.stop>hi</p>
+            <p>{{dem}}</p>
+            <p>Toa do: {{x}}-{{y}}</p>
+        </div>
+        
+    </div>
+    <script>
+        let vm = new Vue({
+            el:'#obj',
+            data: {
+                dem : 0,
+                x:  0,
+                y:  0.
+            },
+            methods: {
+                add(){
+                    return this.dem++
+                },
+                dungsk(event){
+                    event.stopPropagation();
+                    
+                },
+                toado(event){
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+                },
+            },
+        })
+    </script>
+</body>
+
+</html>

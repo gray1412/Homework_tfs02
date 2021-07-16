@@ -11,6 +11,7 @@ func ServerRun() {
 	routerParent := mux.NewRouter().PathPrefix("/api/v1")
 	routerUser := routerParent.PathPrefix("/users").Subrouter()
 
+
 	routerUser.Methods("GET").Path("").HandlerFunc(handler.GetAllUsers)
 	routerUser.Methods("GET").Path("/{id}").HandlerFunc(handler.GetUserById)
 	routerUser.Methods("POST").Path("").HandlerFunc(handler.CreateUser)

@@ -8,7 +8,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/olivere/elastic/v7"
+	elastic "github.com/olivere/elastic/v7"
 )
 
 func CreateDataEs(path string) {

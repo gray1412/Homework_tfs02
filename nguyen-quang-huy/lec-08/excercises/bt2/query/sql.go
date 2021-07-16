@@ -74,9 +74,9 @@ func ReadCSV(path string) {
 
 }
 func ConnectDB() *gorm.DB {
-	dsn := "root:@tcp(127.0.0.1:3306)/testdb"
+	// dsn := "root:@tcp(127.0.0.1:3306)/testdb"
 
-	// dsn := "root:password@tcp(127.0.0.1:3306)/testdb"
+	dsn := "root:password@tcp(127.0.0.1:3306)/testdb"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
 		CreateBatchSize: 1000,
 		Logger:          logger.Default.LogMode(logger.Silent),
